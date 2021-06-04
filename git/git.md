@@ -165,7 +165,7 @@ git 의 주요 역할은 version control 이다. 자료를 수정했을 시 이�
 
 git hub는 git을 이용하여 관리하는 프로젝트를 저장하는 공간이다.
 
-가장 먼저, 컴퓨터(local)에서 생성한 프로젝트를 git hub에서 관리하기 위해서는 연결해줘야 한다.
+우선, 컴퓨터(local)에서 생성한 프로젝트를 git hub에서 관리하기 위해서는 연결해줘야 한다.
 
 - git hub에서 프로젝트 전용 저장소 생성(New repository)
 - 컴퓨터(local) 와 전용 저장소를 remote 
