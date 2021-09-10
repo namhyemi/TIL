@@ -1,0 +1,239 @@
+,file,class_number
+0,01_012_01012004_160342738787134_0.txt,"['1', '1']"
+1,01_012_01012004_161217305559838_0.txt,['0']
+2,01_012_01012004_161220042510675_1.txt,['0']
+3,01_012_01012004_161220069879431_0.txt,['0']
+4,01_012_01012004_161228383475815_1.txt,['0']
+5,01_012_01012005_161198037095428_0.txt,['0']
+6,01_014_01014007_160869374781061_1.txt,"['0', '0']"
+7,01_014_01014008_161058024327804_0.txt,['0']
+8,01_014_01014008_161061081067424_0.txt,['0']
+9,01_014_01014008_161095694072412_1.txt,['0']
+10,01_014_01014008_161114527379757_1.txt,['0']
+11,01_014_01014008_161114556864853_1.txt,['0']
+12,01_014_01014010_161079809516231_1.txt,"['1', '1']"
+13,01_015_01015002_161010477336932_1.txt,['0']
+14,01_015_01015006_161087519785423_0.txt,"['51', '51']"
+15,01_015_01015006_161088134747416_1.txt,"['51', '51']"
+16,01_015_01015007_160881883444387_1.txt,"['0', '0']"
+17,01_015_01015007_160881926331880_1.txt,"['0', '0']"
+18,01_015_01015007_160881999166703_1.txt,"['0', '0']"
+19,01_015_01015007_160882015438497_1.txt,"['0', '0']"
+20,01_015_01015007_160882032798071_0.txt,"['0', '0']"
+21,01_015_01015007_160882061174730_0.txt,"['0', '0']"
+22,01_015_01015007_160882061174730_1.txt,"['0', '0']"
+23,01_015_01015007_160882065377655_0.txt,"['0', '0']"
+24,01_015_01015007_160882067261808_1.txt,"['0', '0']"
+25,01_016_01016005_161027136790426_0.txt,"['91', '91']"
+26,01_016_01016005_161028400749270_1.txt,"['0', '0']"
+27,01_016_01016006_161025861787683_0.txt,"['91', '67']"
+28,01_016_01016007_160285295128773.txt,"['1', '1']"
+29,01_016_01016007_160414739871957_0.txt,['0']
+30,01_016_01016007_161068872638713_1.txt,"['20', '20']"
+31,01_016_01016007_161076872694196_0.txt,"['87', '20']"
+32,01_016_01016008_161085330369653_1.txt,"['1', '1']"
+33,01_016_01016017_160898700985847_1.txt,['0']
+34,01_016_01016017_160898706666760_1.txt,['0']
+35,01_016_01016017_160898717714694_0.txt,['0']
+36,01_016_01016017_160898719713938_0.txt,['0']
+37,01_016_01016017_160898726234078_1.txt,['0']
+38,01_016_01016017_160898752228151_1.txt,['0']
+39,01_016_01016017_160898756729251_1.txt,['0']
+40,01_016_01016017_160898760239017_0.txt,['0']
+41,01_016_01016017_160898782043821_1.txt,['0']
+42,01_016_01016017_160898784190742_1.txt,['0']
+43,01_016_01016017_160898789567077_0.txt,['0']
+44,01_016_01016017_160898789567077_1.txt,['0']
+45,02_021_02011008_160974989033722_1.txt,"['0', '0']"
+46,02_021_02011013_161156157642625_1.txt,"['0', '0']"
+47,02_021_02011014_161025165889799_0.txt,"['171', '154']"
+48,02_021_02011029_160878926875039_0.txt,"['0', '0']"
+49,02_021_02011029_160880378539545_1.txt,"['0', '0']"
+50,02_021_02011030_161147934071557_1.txt,['0']
+51,02_021_02011030_161161099514914_0.txt,['0']
+52,02_021_02011040_160923790536612_1.txt,"['1', '1', '1']"
+53,02_022_02012001_160484568214366_0.txt,['0']
+54,02_022_02012001_160820184065300_0.txt,['0']
+55,02_022_02012004_160855701268340_0.txt,"['0', '0']"
+56,04_041_04011002_160998302320636_0.txt,"['0', '0']"
+57,04_041_04011002_161016323835748_1.txt,"['0', '0']"
+58,04_041_04011004_161071624222726_1.txt,"['139', '139']"
+59,04_041_04011013_160838749287394_1.txt,"['0', '0']"
+60,04_041_04011014_161028674667160_0.txt,"['4', '4']"
+61,04_042_04012001_161020261919432_0.txt,"['0', '0']"
+62,04_043_04013002_161075319081484_0.txt,"['40', '40']"
+63,04_043_04013004_161016711415741_0.txt,"['0', '0']"
+64,04_043_04013009_161016551062085_1.txt,"['163', '163']"
+65,04_043_04013012_161024796818513_1.txt,"['0', '0']"
+66,04_043_04013012_161033331228443_0.txt,"['0', '0']"
+67,04_043_04013012_161036110968683_1.txt,"['0', '0']"
+68,04_043_04013012_161036257341195_0.txt,"['0', '0']"
+69,04_043_04013012_161036686951211_1.txt,"['0', '0']"
+70,04_043_04013012_161037029824261_1.txt,"['0', '0']"
+71,04_043_04013012_161045777283590_1.txt,"['0', '0']"
+72,04_043_04013012_161046369033316_1.txt,"['0', '0']"
+73,04_043_04013012_161046747126359_1.txt,"['0', '0']"
+74,04_043_04013012_161047861839576_0.txt,"['0', '0']"
+75,04_043_04013012_161048006535521_0.txt,"['0', '0']"
+76,04_043_04013012_161060845481598_1.txt,"['0', '0']"
+77,04_043_04013012_161077385310376_0.txt,"['0', '0']"
+78,04_043_04013019_161069606768195_0.txt,"['1', '-1', '2']"
+79,04_043_04013019_161070134871581_1.txt,"['1', '2']"
+80,04_043_04013019_161072968276775_1.txt,"['0', '0']"
+81,04_043_04013019_161078787692547_0.txt,"['1', '2']"
+82,04_043_04013019_161079453654061_1.txt,"['1', '-1', '2']"
+83,04_043_04013019_161080720911329_0.txt,"['1', '2']"
+84,04_043_04013019_161085790879591_1.txt,"['1', '2']"
+85,04_043_04013021_161097951699631_0.txt,"['0', '0']"
+86,04_045_04015001_161017526797463_1.txt,"['0', '0']"
+87,04_049_04019001_160274764775388.txt,['0']
+88,04_049_04019004_160773700946536_1.txt,['0']
+89,05_051_05011010_161015878425485_1.txt,"['0', '0']"
+90,05_052_05012002_161081585035241_1.txt,['0']
+91,05_052_05012004_161019007564440_1.txt,"['0', '0']"
+92,05_053_05013001_160866818870318_1.txt,"['0', '0']"
+93,06_062_06012003_161072302387814_1.txt,"['0', '0']"
+94,06_062_06012003_161076045866470_0.txt,"['57', '57']"
+95,06_062_06012003_161076273945530_0.txt,"['57', '57']"
+96,06_062_06012003_161080823288967_0.txt,"['0', '0']"
+97,06_062_06012006_161017234191369_1.txt,"['0', '0']"
+98,06_062_06012006_161027001390884_0.txt,"['0', '0']"
+99,06_062_06012006_161027006171586_0.txt,"['0', '0']"
+100,06_062_06012006_161034140053661_0.txt,"['0', '0']"
+101,06_062_06012006_161034153848472_1.txt,"['0', '0']"
+102,06_062_06012006_161035129144612_0.txt,"['0', '0']"
+103,06_062_06012006_161035272966397_0.txt,"['0', '0']"
+104,06_062_06012006_161036874897035_1.txt,"['0', '0']"
+105,06_062_06012006_161036878082099_0.txt,"['0', '0']"
+106,06_062_06012006_161036943467763_0.txt,"['0', '0']"
+107,06_062_06012006_161036962710877_0.txt,"['0', '0']"
+108,06_062_06012006_161036965387223_0.txt,"['0', '0']"
+109,06_062_06012006_161037406165767_1.txt,"['0', '0']"
+110,06_062_06012006_161037447781772_1.txt,"['0', '0']"
+111,06_062_06012006_161037504071198_0.txt,"['0', '0']"
+112,06_062_06012006_161037604137725_0.txt,"['0', '0']"
+113,06_062_06012006_161038665917371_0.txt,"['0', '0']"
+114,06_062_06012006_161042509663696_0.txt,"['0', '0']"
+115,06_062_06012006_161043278991996_1.txt,"['0', '0']"
+116,06_062_06012006_161043316357906_0.txt,"['0', '0']"
+117,06_062_06012006_161043321976024_0.txt,"['0', '0']"
+118,06_062_06012006_161045445732841_0.txt,"['0', '0']"
+119,06_062_06012006_161045464791571_0.txt,"['0', '0']"
+120,06_062_06012006_161045464791571_1.txt,"['0', '0']"
+121,06_062_06012006_161045475570985_1.txt,"['0', '0']"
+122,06_062_06012006_161046046040510_0.txt,"['0', '0']"
+123,06_062_06012006_161046195173004_0.txt,"['0', '0']"
+124,06_062_06012006_161046195173004_1.txt,"['0', '0']"
+125,06_062_06012006_161046200088804_0.txt,"['0', '0']"
+126,06_062_06012006_161046203881085_1.txt,"['0', '0']"
+127,06_062_06012006_161046221522138_0.txt,"['0', '0']"
+128,06_062_06012006_161162866478186_1.txt,"['0', '0']"
+129,06_062_06012006_161163756329171_0.txt,"['0', '0']"
+130,06_062_06012010_161037606330073_0.txt,['0']
+131,06_062_06012010_161037649660783_1.txt,['0']
+132,06_062_06012012_160827626094583_1.txt,"['0', '0']"
+133,06_062_06012012_160830499630688_0.txt,['0']
+134,06_062_06012012_160830578376465_1.txt,['0']
+135,06_062_06012012_160830580290794_1.txt,['0']
+136,06_062_06012012_160830586664315_1.txt,['0']
+137,06_062_06012012_160830599061284_0.txt,['0']
+138,06_062_06012012_160830607451990_1.txt,['0']
+139,06_062_06012012_160831470793552_0.txt,['0']
+140,06_062_06012012_160831476841875_0.txt,['0']
+141,06_062_06012012_160831482778136_1.txt,['0']
+142,06_062_06012012_160831494519231_0.txt,['0']
+143,06_062_06012012_160833914678779_0.txt,['0']
+144,06_062_06012012_160834036079266_0.txt,['0']
+145,06_062_06012012_160834036079266_1.txt,['0']
+146,06_062_06012012_160835699352173_1.txt,['0']
+147,06_062_06012012_160835890417638_1.txt,['0']
+148,06_062_06012012_160835898076088_1.txt,['0']
+149,06_062_06012012_160835911544880_1.txt,['0']
+150,06_062_06012012_160835924436294_1.txt,['0']
+151,06_062_06012012_160836653212917_1.txt,['0']
+152,06_062_06012012_160836733412646_1.txt,['0']
+153,06_062_06012012_160836918444565_1.txt,['0']
+154,06_062_06012012_160836953970894_0.txt,['0']
+155,06_062_06012012_160837058664850_0.txt,['0']
+156,06_062_06012012_160837155217306_0.txt,['0']
+157,06_062_06012012_160837172847002_1.txt,['0']
+158,06_062_06012012_160837180684851_1.txt,['0']
+159,06_062_06012012_160837798924950_1.txt,['0']
+160,06_062_06012012_160837824925448_0.txt,['0']
+161,06_062_06012012_160838287594447_1.txt,['0']
+162,07_071_07011001_160886193888040_0.txt,"['1', '1']"
+163,07_071_07011003_161080519833528_1.txt,"['131', '169']"
+164,07_073_07013001_160325016210296_1.txt,"['0', '0']"
+165,07_073_07013002_161075979296942_0.txt,"['0', '0']"
+166,07_073_07013006_160816706879198_1.txt,"['0', '0']"
+167,07_073_07013013_160924158527914_0.txt,"['0', '0']"
+168,08_081_08011004_160350912014719_1.txt,"['0', '0']"
+169,09_091_09011002_161175427021515_0.txt,"['1', '1']"
+170,09_091_09011004_160931898334031_0.txt,"['0', '0']"
+171,09_091_09011006_161018227280186_1.txt,"['0', '0']"
+172,09_093_09013001_161086413698101_1.txt,"['1', '1']"
+173,10_102_10012007_161085703918932_1.txt,"['82', '179']"
+174,10_102_10012007_161101989749141_0.txt,"['116', '116']"
+175,10_102_10012009_160894945734463_0.txt,['0']
+176,10_102_10012009_160894949442631_0.txt,['0']
+177,10_102_10012009_160896490395912_1.txt,['0']
+178,10_102_10012009_160896531919963_0.txt,['0']
+179,10_102_10012009_160896551754773_0.txt,['0']
+180,10_102_10012009_160896587934160_1.txt,['0']
+181,10_102_10012009_160897334962319_0.txt,['0']
+182,10_102_10012009_160898145964352_0.txt,['0']
+183,10_102_10012009_160898148876960_1.txt,['0']
+184,10_102_10012009_160899158534912_0.txt,['0']
+185,10_102_10012009_160899168336366_1.txt,['0']
+186,10_102_10012009_160899171517003_1.txt,['0']
+187,10_102_10012009_160899177084705_0.txt,['0']
+188,10_102_10012009_160899178878784_1.txt,['0']
+189,10_104_10014002_160947843754659_0.txt,"['0', '0']"
+190,10_104_10014006_160817110025306_0.txt,"['0', '0']"
+191,11_112_11012002_160830258221916_0.txt,['0']
+192,11_113_11013007_160620667498327_0.txt,"['1', '1']"
+193,11_113_11013012_160998046566987_0.txt,"['0', '0']"
+194,11_114_11014002_160958283933412_1.txt,"['0', '0']"
+195,11_114_11014002_160958286637407_1.txt,"['0', '0']"
+196,11_114_11014002_160958290420308_1.txt,"['0', '0']"
+197,11_114_11014002_160958339251468_1.txt,"['0', '0']"
+198,11_114_11014002_160958381988596_1.txt,"['0', '0']"
+199,11_114_11014010_160816654499117_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>나물무침류_어패류무침_오징어무침_freefat77_20201217_160816654499117_0.jpg</filename>\n', '\t<path>/my-project-name/나물무침류_어패류무침_오징어무침_freefat77_20201217_160816654499117_0.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3492</width>\n', '\t\t<height>3492</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>252</xmin>\n', '\t\t\t<ymin>197</ymin>\n', '\t\t\t<xmax>3290</xmax>\n', '\t\t\t<ymax>3255</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>918</xmin>\n', '\t\t\t<ymin>974</ymin>\n', '\t\t\t<xmax>2644</xmax>\n', '\t\t\t<ymax>2538</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+200,11_114_11014010_160816697358811_1.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>나물무침류_어패류무침_오징어무침_freefat77_20201217_160816697358811_1.jpg</filename>\n', '\t<path>/my-project-name/나물무침류_어패류무침_오징어무침_freefat77_20201217_160816697358811_1.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3492</width>\n', '\t\t<height>3492</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>353</xmin>\n', '\t\t\t<ymin>177</ymin>\n', '\t\t\t<xmax>3260</xmax>\n', '\t\t\t<ymax>3144</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>727</xmin>\n', '\t\t\t<ymin>348</ymin>\n', '\t\t\t<xmax>2987</xmax>\n', '\t\t\t<ymax>2659</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+201,11_114_11014010_160817737585326_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>나물무침류_어패류무침_오징어무침_kihwa3123_20201217_160817737585326_0.jpg</filename>\n', '\t<path>/my-project-name/나물무침류_어패류무침_오징어무침_kihwa3123_20201217_160817737585326_0.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3024</width>\n', '\t\t<height>4032</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>52</xmin>\n', '\t\t\t<ymin>867</ymin>\n', '\t\t\t<xmax>2465</xmax>\n', '\t\t\t<ymax>3270</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>568</xmin>\n', '\t\t\t<ymin>1304</ymin>\n', '\t\t\t<xmax>2098</xmax>\n', '\t\t\t<ymax>2903</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+202,11_114_11014010_160819640272990_1.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>나물무침류_어패류무침_오징어무침_jasmin_20201217_160819640272990_1.jpg</filename>\n', '\t<path>/my-project-name/나물무침류_어패류무침_오징어무침_jasmin_20201217_160819640272990_1.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>4032</width>\n', '\t\t<height>3024</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>23</xmin>\n', '\t\t\t<ymin>481</ymin>\n', '\t\t\t<xmax>3869</xmax>\n', '\t\t\t<ymax>2706</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>746</xmin>\n', '\t\t\t<ymin>586</ymin>\n', '\t\t\t<xmax>3263</xmax>\n', '\t\t\t<ymax>2031</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+203,11_114_11014010_160819656053229_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>나물무침류_어패류무침_오징어무침_jasmin_20201217_160819656053229_0.jpg</filename>\n', '\t<path>/my-project-name/나물무침류_어패류무침_오징어무침_jasmin_20201217_160819656053229_0.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3024</width>\n', '\t\t<height>4032</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>35</xmin>\n', '\t\t\t<ymin>622</ymin>\n', '\t\t\t<xmax>2875</xmax>\n', '\t\t\t<ymax>3462</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>629</xmin>\n', '\t\t\t<ymin>867</ymin>\n', '\t\t\t<xmax>2508</xmax>\n', '\t\t\t<ymax>3095</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+204,11_114_11014010_160819675413537_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>나물무침류_어패류무침_오징어무침_jasmin_20201217_160819675413537_0.jpg</filename>\n', '\t<path>/my-project-name/나물무침류_어패류무침_오징어무침_jasmin_20201217_160819675413537_0.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3024</width>\n', '\t\t<height>4032</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>315</xmin>\n', '\t\t\t<ymin>674</ymin>\n', '\t\t\t<xmax>2814</xmax>\n', '\t\t\t<ymax>3200</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>489</xmin>\n', '\t\t\t<ymin>1015</ymin>\n', '\t\t\t<xmax>2674</xmax>\n', '\t\t\t<ymax>3017</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+205,11_114_11014010_160819687394077_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>나물무침류_어패류무침_오징어무침_jasmin_20201217_160819687394077_0.jpg</filename>\n', '\t<path>/my-project-name/나물무침류_어패류무침_오징어무침_jasmin_20201217_160819687394077_0.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>4032</width>\n', '\t\t<height>3024</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>699</xmin>\n', '\t\t\t<ymin>632</ymin>\n', '\t\t\t<xmax>3298</xmax>\n', '\t\t\t<ymax>2357</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>1107</xmin>\n', '\t\t\t<ymin>935</ymin>\n', '\t\t\t<xmax>2937</xmax>\n', '\t\t\t<ymax>2066</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+206,11_114_11014010_160821121699244_1.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>나물무침류_어패류무침_오징어무침_eunumom20_20201217_160821121699244_1.JPEG</filename>\n', '\t<path>/my-project-name/나물무침류_어패류무침_오징어무침_eunumom20_20201217_160821121699244_1.JPEG</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>1536</width>\n', '\t\t<height>2048</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>155</xmin>\n', '\t\t\t<ymin>471</ymin>\n', '\t\t\t<xmax>1363</xmax>\n', '\t\t\t<ymax>1404</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>346</xmin>\n', '\t\t\t<ymin>631</ymin>\n', '\t\t\t<xmax>1199</xmax>\n', '\t\t\t<ymax>1253</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+207,12_121_12011002_160908104384543_0.txt,['0']
+208,12_121_12011005_160940283376824_1.txt,['0']
+209,12_121_12011011_160657376580879_1.txt,"['1', '1']"
+210,12_121_12011012_161019572145983_0.txt,"['164', '173']"
+211,13_132_13012001_160352886598103_0.txt,"['1', '1']"
+212,14_142_14012001_160991475269348_1.txt,"['1', '1']"
+213,15_151_15011007_160813707778446_1.txt,['0']
+214,15_151_15011007_160816916588073_0.txt,['0']
+215,15_151_15011007_160816934254978_0.txt,['0']
+216,15_151_15011007_160816939622281_1.txt,['0']
+217,15_151_15011007_160816942613430_0.txt,['0']
+218,15_151_15011007_160816942613430_1.txt,['0']
+219,15_151_15011007_160817111010805_1.txt,['0']
+220,15_151_15011007_160817118212643_1.txt,['0']
+221,15_151_15011007_160817207988062_0.txt,['0']
+222,15_151_15011007_160819384867876_0.txt,['0']
+223,15_151_15011007_160819422665233_0.txt,['0']
+224,15_151_15011007_160819493150840_0.txt,['0']
+225,15_151_15011007_160819501621122_1.txt,['0']
+226,15_151_15011017_160795289355250_0.txt,"['0', '0']"
+227,15_151_15011017_160833566956272_0.txt,"['1', '1']"
+228,16_161_16011001_160929940745630_1.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_ssuki39_20201230_160929940745630_1.jpg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_ssuki39_20201230_160929940745630_1.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>4032</width>\n', '\t\t<height>3024</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>598</xmin>\n', '\t\t\t<ymin>337</ymin>\n', '\t\t\t<xmax>3220</xmax>\n', '\t\t\t<ymax>2360</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>1396</xmin>\n', '\t\t\t<ymin>892</ymin>\n', '\t\t\t<xmax>2664</xmax>\n', '\t\t\t<ymax>1904</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+229,16_161_16011001_160929955930898_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_ssuki39_20201230_160929955930898_0.jpg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_ssuki39_20201230_160929955930898_0.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3024</width>\n', '\t\t<height>4032</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>400</xmin>\n', '\t\t\t<ymin>1118</ymin>\n', '\t\t\t<xmax>2636</xmax>\n', '\t\t\t<ymax>3354</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>1088</xmin>\n', '\t\t\t<ymin>1660</ymin>\n', '\t\t\t<xmax>1992</xmax>\n', '\t\t\t<ymax>2756</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+230,16_161_16011001_160929961439044_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_ssuki39_20201230_160929961439044_0.jpg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_ssuki39_20201230_160929961439044_0.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3024</width>\n', '\t\t<height>4032</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>366</xmin>\n', '\t\t\t<ymin>960</ymin>\n', '\t\t\t<xmax>2670</xmax>\n', '\t\t\t<ymax>3287</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>998</xmin>\n', '\t\t\t<ymin>1288</ymin>\n', '\t\t\t<xmax>2015</xmax>\n', '\t\t\t<ymax>2903</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+231,16_161_16011001_160929978091195_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_ssuki39_20201230_160929978091195_0.jpg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_ssuki39_20201230_160929978091195_0.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3024</width>\n', '\t\t<height>4032</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>738</xmin>\n', '\t\t\t<ymin>847</ymin>\n', '\t\t\t<xmax>2534</xmax>\n', '\t\t\t<ymax>3400</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>976</xmin>\n', '\t\t\t<ymin>1231</ymin>\n', '\t\t\t<xmax>2207</xmax>\n', '\t\t\t<ymax>3072</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+232,16_161_16011001_160929987118828_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_ssuki39_20201230_160929987118828_0.jpg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_ssuki39_20201230_160929987118828_0.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3024</width>\n', '\t\t<height>4032</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>445</xmin>\n', '\t\t\t<ymin>960</ymin>\n', '\t\t\t<xmax>2670</xmax>\n', '\t\t\t<ymax>3174</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>1043</xmin>\n', '\t\t\t<ymin>1502</ymin>\n', '\t\t\t<xmax>2082</xmax>\n', '\t\t\t<ymax>2790</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+233,16_161_16011001_160931291020031_1.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_reve226_20201230_160931291020031_1.jpeg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_reve226_20201230_160931291020031_1.jpeg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>4032</width>\n', '\t\t<height>3024</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>427</xmin>\n', '\t\t\t<ymin>707</ymin>\n', '\t\t\t<xmax>3704</xmax>\n', '\t\t\t<ymax>2417</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>1126</xmin>\n', '\t\t\t<ymin>906</ymin>\n', '\t\t\t<xmax>3063</xmax>\n', '\t\t\t<ymax>2075</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+234,16_161_16011001_160933231162634_1.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_rynar_20201230_160933231162634_1.jpg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_rynar_20201230_160933231162634_1.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>4032</width>\n', '\t\t<height>3024</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>256</xmin>\n', '\t\t\t<ymin>508</ymin>\n', '\t\t\t<xmax>3833</xmax>\n', '\t\t\t<ymax>2645</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>1083</xmin>\n', '\t\t\t<ymin>536</ymin>\n', '\t\t\t<xmax>3590</xmax>\n', '\t\t\t<ymax>1833</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+235,16_161_16011001_160933245489245_1.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_rynar_20201230_160933245489245_1.jpg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_rynar_20201230_160933245489245_1.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>4032</width>\n', '\t\t<height>3024</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>199</xmin>\n', '\t\t\t<ymin>508</ymin>\n', '\t\t\t<xmax>3904</xmax>\n', '\t\t\t<ymax>2858</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>1339</xmin>\n', '\t\t\t<ymin>508</ymin>\n', '\t\t\t<xmax>3163</xmax>\n', '\t\t\t<ymax>2345</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+236,16_161_16011001_160933254251582_1.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_rynar_20201230_160933254251582_1.jpg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_rynar_20201230_160933254251582_1.jpg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>4032</width>\n', '\t\t<height>3024</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>114</xmin>\n', '\t\t\t<ymin>251</ymin>\n', '\t\t\t<xmax>3918</xmax>\n', '\t\t\t<ymax>2858</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>1482</xmin>\n', '\t\t\t<ymin>351</ymin>\n', '\t\t\t<xmax>3191</xmax>\n', '\t\t\t<ymax>1833</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
+237,16_161_16011001_160933403991614_0.txt,"['<annotation>\n', '\t<folder>my-project-name</folder>\n', '\t<filename>한과류_한과류_매작과_shalala_20201230_160933403991614_0.jpeg</filename>\n', '\t<path>/my-project-name/한과류_한과류_매작과_shalala_20201230_160933403991614_0.jpeg</path>\n', '\t<source>\n', '\t\t<database>Unspecified</database>\n', '\t</source>\n', '\t<size>\n', '\t\t<width>3024</width>\n', '\t\t<height>4032</height>\n', '\t\t<depth>3</depth>\n', '\t</size>\n', '\t<object>\n', '\t\t<name>dish</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>230</xmin>\n', '\t\t\t<ymin>926</ymin>\n', '\t\t\t<xmax>2771</xmax>\n', '\t\t\t<ymax>3512</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '\t<object>\n', '\t\t<name>food</name>\n', '\t\t<pose>Unspecified</pose>\n', '\t\t<truncated>Unspecified</truncated>\n', '\t\t<difficult>Unspecified</difficult>\n', '\t\t<bndbox>\n', '\t\t\t<xmin>772</xmin>\n', '\t\t\t<ymin>1592</ymin>\n', '\t\t\t<xmax>2195</xmax>\n', '\t\t\t<ymax>3128</ymax>\n', '\t\t</bndbox>\n', '\t</object>\n', '</annotation>']"
