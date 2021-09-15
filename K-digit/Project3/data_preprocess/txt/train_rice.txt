@@ -1,0 +1,2 @@
+/home/bpm/dataset/training/1010/01_011_01011001_160273203821324.jpg
+/home/bpm/dataset/training/2020/01_012_01012001_160273932775790.jpg
