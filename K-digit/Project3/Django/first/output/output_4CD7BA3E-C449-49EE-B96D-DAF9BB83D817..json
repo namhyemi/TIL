@@ -1,0 +1,10 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/eunjilee4CD7BA3E-C449-49EE-B96D-DAF9BB83D817.jpeg", 
+ "objects": [ 
+  {"class_id":285, "name":"10011002", "relative_coordinates":{"center_x":0.197321, "center_y":0.152074, "width":0.202815, "height":0.194523}, "confidence":0.602953}, 
+  {"class_id":131, "name":"04012002", "relative_coordinates":{"center_x":0.866369, "center_y":0.713633, "width":0.191089, "height":0.285854}, "confidence":0.901579}
+ ] 
+}
+]

@@ -1,0 +1,9 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampus2019-03-04-17-51-15.jpg", 
+ "objects": [ 
+  {"class_id":113, "name":"03012001", "relative_coordinates":{"center_x":0.049044, "center_y":0.974999, "width":0.106071, "height":0.058745}, "confidence":0.457249}
+ ] 
+}
+]

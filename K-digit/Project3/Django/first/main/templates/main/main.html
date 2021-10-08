@@ -1,0 +1,629 @@
+{% extends 'main/main_base.html'%}
+{% load static %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+{% block style %}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Do Hyeon', sans-serif;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .calendar {
+        float: left;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(214, 238, 217, 0.829);
+        border: 20px greenyellow;
+        margin: 4px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .calories {
+        float: left;
+        width: 100%;
+        height: 150px;
+        background-color: rgba(214, 238, 217, 0.829);
+        border: 20px greenyellow;
+        margin-left :4px; margin-right:4px;
+    }
+
+    .mealplan {
+        float: left;
+        width: 100%;
+        height: 400px;
+        background: rgba(214, 238, 217, 0.829);
+        border: 20px greenyellow;
+        margin: 4px;
+    }
+
+    .dailystats {
+        float: left;
+        width: 100%;
+        height: 600px;
+        background: rgba(214, 238, 217, 0.829);
+        border: 20px greenyellow;
+        margin-left :4px; margin-right:4px;
+    }
+
+    
+    .containers {
+        width: 400px;
+        height: 500px;
+        margin: 50px auto;
+        border: 1px solid #ccc;
+    }
+
+
+        /* 화면 너비 0 ~ 3840px */
+        @media (max-width: 3840px) {
+        #wrap {
+            width: 100%;
+        }
+        .calendar {
+            width: 100%;
+            height: 40px;
+        }
+        .calories {
+            width: 100%;
+        }
+        .mealplan {
+            height: 100%;
+            width: 100%;
+        }
+        .dailystats {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    /* 화면 너비 0 ~ 768px */
+    /* 화면 너비 0 ~ 768px */
+    @media (max-width: 768px) {       
+        .calendar {
+            width: 100%;
+            height: 40px;
+        }
+        .calories {
+            width: 100%;
+        }
+        .mealplan {
+            height: 100%;
+            width: 100%;
+        }
+        .dailystats {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+
+    #wrapper {
+        margin: 5%;
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sun {
+        width: 35px;
+        height: 35px;
+        vertical-align: middle;
+        float: left;
+        margin: 5px;
+        position: relative;
+        top: 7px;
+        left: 5px;
+    }
+
+    /* Accordion Container */
+    .container {
+        width: 100%;
+        max-width: 500px;
+        min-width: 300px;
+        position: relative;
+        bottom: 60px;
+    }
+
+    /* shadow */
+    .container:before {
+        content: '';
+        position: absolute;
+        width: calc(100% - 30px);
+        height: 100%;
+        margin: 0;
+        left: 15px;
+        background-color: transparent;
+        top: 0px;
+        box-shadow: 0px 20px 40px #52616b;
+        opacity: 0.2;
+        z-index: -1;
+        transition: ease-in-out 0.6s all;
+    }
+
+    .container:hover.container:before {
+        box-shadow: 0px 40px 100px #52616b;
+    }
+
+    /* ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color:rgb(253, 253, 245);
+        border-radius: 20px;
+    } */
+
+    .accordionTitle {
+        padding: 20px;
+        position: relative;
+        left: 0px;
+        margin: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        color: #52616b;
+        transition: ease-in-out 0.2s all;
+        cursor: pointer;
+    }
+
+    .accordionTitle:hover {
+        padding-left: 25px;
+    }
+
+    /* Accordion Item line */
+    .accordionTitle:before,
+    .accordionTitle:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        border-radius: 50px;
+        transition: ease-in-out 0.6s all;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .accordionTitle:before {
+        width: 100%;
+        /* background-color: #c9d6df; */
+        background-color: rgba(214, 238, 217, 0.829);
+    }
+
+    .accordionTitle:after {
+        background-image: linear-gradient(90deg, #52616b, #c9d6df);
+        width: 0%;
+    }
+
+    .accordionTitle:hover::after {
+        width: 100%;
+    }
+
+    /* Accordion Item line - Active */
+    .accordionTitleActive:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        border-radius: 50px;
+        transition: ease-in-out 0.6s all;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .accordionTitleActive:after {
+        background-image: linear-gradient(90deg, #52616b, #c9d6df);
+        width: 100%;
+    }
+
+
+    /* Accordion Item Icon  */
+    .accIcon {
+        float: right;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        margin-top: -3px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .accIcon:before,
+    .accIcon:after {
+        content: '';
+        position: absolute;
+        border-radius: 50px;
+        background-color: #ffffff;
+        transition: ease 0.3s all;
+    }
+
+    .accIcon:before {
+        width: 2px;
+        height: 20px;
+    }
+
+    .accIcon:after {
+        width: 20px;
+        height: 2px;
+    }
+
+    .accordionTitle:hover .accIcon:before,
+    .accordionTitle:hover .accIcon:after {
+        background-color: #52616b;
+    }
+
+    .accIcon.anime.accIcon:before {
+        transform: rotate(90deg);
+    }
+
+    .accordion{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color:rgb(253, 253, 245);
+        border-radius: 20px;
+    }
+
+    /* Text Content */
+    .accordion .item .text {
+        opacity: 0;
+        height: 0;
+        padding: 0px 20px;
+        position: relative;
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: 200;
+        transition: all 0.6s cubic-bezier(.42, .2, .08, 1);
+        overflow: hidden;
+        background-color: #f0f5f9;
+        letter-spacing: 0.5px;
+    }
+
+    /* Text Content - Class for JS to hide and show */
+    .accordion .item .text.show {
+        opacity: 1;
+        height: auto;
+        padding: 25px 20px;
+        position: relative;
+        z-index: 0;
+        border-radius: 0px 0px 3px 3px;
+    }
+
+    .deleteYes{
+        background:rgba(255, 255, 255, 0.404);
+        width: 50px;
+        border-radius: 6px;
+    }
+
+    .deleteNo{
+        background:rgba(255, 255, 255, 0.404);
+        width: 50px;
+        border-radius: 6px;
+    }
+
+    .modal{
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0);
+        top:0;
+        left:0;
+        display: none;
+    }
+
+    .modal_content{
+        width:80%; height:auto;
+        background:#fff; border-radius:10px;
+        position:absolute; top:10%; left:50%;
+        margin-top:10%; margin-left:-40%;
+        text-align:center;
+        box-sizing:border-box; padding:10px 0;
+        line-height:23px; cursor:pointer;
+    }
+</style>
+{% endblock style %}
+
+{% block script %}
+<script>
+    window.onload = function() {
+            // variables
+        var accordionBtn = document.querySelectorAll('.accordionTitle');
+        var allTexts = document.querySelectorAll('.text');
+        var accIcon = document.querySelectorAll('.accIcon');
+
+        // event listener
+        accordionBtn.forEach(function (el) {
+            el.addEventListener('click', toggleAccordion)
+        });
+
+        // function
+        function toggleAccordion(el) {
+        var targetText = el.currentTarget.nextElementSibling.classList;
+        var targetAccIcon = el.currentTarget.children[0];
+        var target = el.currentTarget;
+        
+        if (targetText.contains('show')) {
+            targetText.remove('show');
+            targetAccIcon.classList.remove('anime');
+            target.classList.remove('accordionTitleActive');
+        } 
+        else {
+            accordionBtn.forEach(function (el) {
+                el.classList.remove('accordionTitleActive');
+                
+                allTexts.forEach(function (el) {
+                    el.classList.remove('show');
+                })
+                
+                accIcon.forEach(function (el) {
+                el.classList.remove('anime');
+                }) 
+                
+            })
+            
+                targetText.add('show');
+                target.classList.add('accordionTitleActive');
+                targetAccIcon.classList.add('anime');
+        }  
+        }
+    }
+</script>
+
+<script>
+    // jquery function
+    $(document).ready(function () {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['탄수화물', '단백질', '지방'], //loop through queryset, 
+                datasets: [{
+                    label: '# of users',
+                    data: ['{{탄수화물}}', '{{단백질}}', '{{지방}}'],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+    function AutoSubmit(){
+        document.frm.submit();
+    }
+
+    function AutoSubmit2(){
+        document.frm2.submit();
+    }
+
+    $(function(){
+
+        $(".modalbutton0").click(function(){
+            $(".modal0").fadeIn();
+        });
+
+        $(".modalbutton1").click(function(){
+            $(".modal1").fadeIn();
+        });
+
+        $(".modalbutton2").click(function(){
+            $(".modal2").fadeIn();
+        });
+
+        $(".modalbutton3").click(function(){
+            $(".modal3").fadeIn();
+        });
+
+        $(".modalbutton4").click(function(){
+            $(".modal4").fadeIn();
+        });
+
+        $(".deleteNo").click(function(){
+            $(".modal0").fadeOut();
+            $(".modal1").fadeOut();
+            $(".modal2").fadeOut();
+            $(".modal3").fadeOut();
+            $(".modal4").fadeOut();
+        });
+
+        $(".modal_content").click(function(){
+            $(".modal0").fadeOut();
+            $(".modal1").fadeOut();
+            $(".modal2").fadeOut();
+            $(".modal3").fadeOut();
+            $(".modal4").fadeOut();
+        });
+
+    });
+
+</script>
+{% endblock script%}
+{% block contents %}
+    <div id="wrap">
+        <!-- <form method = "post" enctype="multipart/form-data" name="frm">
+            {% csrf_token %}
+            <input type="date" id="mainDate" name="mainDate" onchange="AutoSubmit()" value="{{mainTime}}">
+        </form> -->
+        <form method = "POST" enctype="multipart/form-data" name="frm">
+            {% csrf_token %}
+            <div class='calendar'>
+                <!-- <input type="date" id="mainDate" name="mainDate" onchange="AutoSubmit()" style="background: transparent; border : 1px solid rgba(214, 238, 217, 0.829);" value="{{mainTime}}" required="required"/> -->
+                <input type="date" id="mainDate" name="mainDate" onchange="AutoSubmit()" style="border : 1px solid rgba(214, 238, 217, 0.829); background-color: transparent;" value="{{mainTime}}" required="required"/>
+            </div>
+        </form>
+        <section class="calories" style="text-align: center;">
+            <br>
+            <div style="color:rgb(3, 31, 3) ; text-align: center; font-size: 20px;" >
+                총 섭취 칼로리
+            </div>
+            <br>
+            <p>{{에너지}} / {{기준에너지}} kcal</p>
+        </section>
+
+        <section class="mealplan">
+            <br>
+            <div style="color:rgb(3, 31, 3) ; text-align: center; font-size: 20px;" > 오늘의 식단 </div>
+
+            <section id="wrapper">
+                <div class="container">
+                    <ul class="accordion">
+                        <li class="item">
+                            <img class=sun src="https://cdn-icons-png.flaticon.com/512/3892/3892928.png" alt></img>
+                            <h2 class="accordionTitle">&nbsp &nbsp 아침 식사 <span class="accIcon"></span></h2>
+
+                            <ul class="text">
+                                {% for image in BreakfastImage %}
+                                <button class="modalbutton{{forloop.counter0}}"
+                                        style="display: inline; float: right; background:rgba(255, 255, 255, 0.404); width: 50px; border-radius: 6px;">삭제</button>
+                                <div class="modal{{forloop.counter0}}" style="display: none; position:absolute; width: 100%; height: 100%;
+                                                background: rgba(0,0,0,0.1); top:0; left:0; display: none;">
+                                    <div class="modal_content">
+                                            <br>해당 식단을 삭제하시겠습니까?<br>
+                                        <form method = "post" enctype="multipart/form-data" name="frm2">
+                                            {% csrf_token %}
+                                            <input type="hidden" id="deleteSeq" name="deleteSeq" value="{{image.FileSeq}}">
+                                            <input type="hidden" id="mainDate" name="mainDate" value="{{mainTime}}"><br>
+                                            <input type="submit" style="display: inline;" class="deleteYes" value="예">&nbsp &nbsp &nbsp &nbsp
+                                            <input type="button" class="deleteNo" value="아니오">
+                                        </form>
+                                    </div>
+                                </div>
+                                <img src="{% static '' %}{{image.BreakfastImage}}" width="150" height="auto" 
+                                    style="display: block; margin-left: auto; margin-right: auto; text-align: center;"><br>
+                                    {% for item in Breakfast %}
+                                        {% if image.FileSeq == item.FileSeq %}
+                                            <p>{{item.name}} {{item.gram}}g</p>
+                                            <p style="text-align: right;">{{item.cal}} kcal</p>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <p style="text-align: center;">----------------------------------------</p>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <img class=sun src="https://cdn-icons-png.flaticon.com/512/2925/2925521.png" alt></img>
+                            <h2 class="accordionTitle">&nbsp &nbsp 점심 식사 <span class="accIcon"></span></h2>
+                            <ul class="text">
+                                {% for image in LunchImage %}
+                                <button class="modalbutton{{forloop.counter0}}"
+                                        style="display: inline; float: right; background:rgba(255, 255, 255, 0.404); width: 50px; border-radius: 6px;">삭제</button>
+                                <div class="modal{{forloop.counter0}}" style="display: none; position:absolute; width: 100%; height: 100%;
+                                                background: rgba(0,0,0,0.1); top:0; left:0; display: none;">
+                                    <div class="modal_content">
+                                            <br>해당 식단을 삭제하시겠습니까?<br>
+                                        <form method = "post" enctype="multipart/form-data" name="frm2">
+                                            {% csrf_token %}
+                                            <input type="hidden" id="deleteSeq" name="deleteSeq" value="{{image.FileSeq}}">
+                                            <input type="hidden" id="mainDate" name="mainDate" value="{{mainTime}}"><br>
+                                            <input type="submit" style="display: inline;" class="deleteYes" value="예">&nbsp &nbsp &nbsp &nbsp
+                                            <input type="button" class="deleteNo" value="아니오">
+                                        </form>
+                                    </div>
+                                </div>
+                                <img src="{% static '' %}{{image.LunchImage}}" width="150" height="auto" 
+                                    style="display: block; margin-left: auto; margin-right: auto;"><br>
+                                    {% for item in Lunch %}
+                                        {% if image.FileSeq == item.FileSeq %}
+                                            <p>{{item.name}} {{item.gram}}g</p>
+                                            <p style="text-align: right;">{{item.cal}} kcal</p>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <p style="text-align: center;">-----------------------------------------</p>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <img class=sun src="https://cdn-icons-png.flaticon.com/512/740/740878.png" alt></img>
+                            <h2 class="accordionTitle">&nbsp &nbsp 저녁 식사 <span class="accIcon"></span></h2>
+                            <ul class="text">
+                                {% for image in DinnerImage %}
+                                <button class="modalbutton{{forloop.counter0}}"
+                                        style="display: inline; float: right; background:rgba(255, 255, 255, 0.404); width: 50px; border-radius: 6px;">삭제</button>
+                                <div class="modal{{forloop.counter0}}" style="display: none; position:absolute; width: 100%; height: 100%;
+                                                background: rgba(0,0,0,0.1); top:0; left:0; display: none;">
+                                    <div class="modal_content">
+                                            <br>해당 식단을 삭제하시겠습니까?<br>
+                                        <form method = "post" enctype="multipart/form-data" name="frm2">
+                                            {% csrf_token %}
+                                            <input type="hidden" id="deleteSeq" name="deleteSeq" value="{{image.FileSeq}}">
+                                            <input type="hidden" id="mainDate" name="mainDate" value="{{mainTime}}"><br>
+                                            <input type="submit" style="display: inline;" class="deleteYes" value="예">&nbsp &nbsp &nbsp &nbsp
+                                            <input type="button" class="deleteNo" value="아니오">
+                                        </form>
+                                    </div>
+                                </div>
+                                <img src="{% static '' %}{{image.DinnerImage}}" width="150" height="auto" 
+                                    style="display: block; margin-left: auto; margin-right: auto;"><br>
+                                    {% for item in Dinner %}
+                                        {% if image.FileSeq == item.FileSeq %}
+                                            <p>{{item.name}} {{item.gram}}g</p>
+                                            <p style="text-align: right;">{{item.cal}} kcal</p>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <p style="text-align: center;">----------------------------------------</p>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </section>
+
+        <section class="dailystats">
+            <br>
+            <p style="color:rgb(3, 31, 3) ; text-align: center; font-size: 20px;" > 일일 섭취 영양 성분</p>
+            <!-- displaying the chart -->
+            <!-- you can also play around with the width and height to increase or decrease the chart size -->
+            <div>
+                {% if 단백질 != 0 or 탄수화물 != 0 or 지방 != 0 %}
+                    <canvas id="myChart" width="800" height="350"></canvas>
+                {% else %}
+                    <div style="height: 100px;">
+                        <p style=" margin-top: 100px; text-align: center;" >저장한 식단이 없습니다</p> 
+                    </div>
+                {% endif %}
+            </div>
+            <br><br>
+        </section>
+
+    </div>
+{% endblock contents %}

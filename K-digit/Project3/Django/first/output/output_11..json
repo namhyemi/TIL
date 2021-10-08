@@ -1,0 +1,15 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampus11.jfif", 
+ "objects": [ 
+  {"class_id":87, "name":"02011031", "relative_coordinates":{"center_x":0.275210, "center_y":0.451358, "width":0.181123, "height":0.251779}, "confidence":0.385310}, 
+  {"class_id":311, "name":"11011008", "relative_coordinates":{"center_x":0.275210, "center_y":0.451358, "width":0.181123, "height":0.251779}, "confidence":0.520073}, 
+  {"class_id":310, "name":"11011007", "relative_coordinates":{"center_x":0.598864, "center_y":0.445867, "width":0.332746, "height":0.219923}, "confidence":0.296410}, 
+  {"class_id":178, "name":"04019003", "relative_coordinates":{"center_x":0.567076, "center_y":0.775279, "width":0.212984, "height":0.280768}, "confidence":0.439822}, 
+  {"class_id":171, "name":"04017002", "relative_coordinates":{"center_x":0.567289, "center_y":0.776342, "width":0.164729, "height":0.278420}, "confidence":0.419687}, 
+  {"class_id":56, "name":"01016018", "relative_coordinates":{"center_x":0.638887, "center_y":0.171627, "width":0.103421, "height":0.179692}, "confidence":0.595498}, 
+  {"class_id":0, "name":"01011001", "relative_coordinates":{"center_x":0.339995, "center_y":0.778289, "width":0.152954, "height":0.231611}, "confidence":0.806309}
+ ] 
+}
+]

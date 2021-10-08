@@ -1,0 +1,5 @@
+classes = 4
+train = data/obj/train_rice.txt
+valid = data/obj/test_rice.txt
+names = data/obj-3rice.names
+backup = backup

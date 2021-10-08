@@ -1,0 +1,13 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampusKakaoTalk_20211007_132158224.jpg", 
+ "objects": [ 
+  {"class_id":342, "name":"12011001", "relative_coordinates":{"center_x":0.840197, "center_y":0.159734, "width":0.146358, "height":0.228810}, "confidence":0.330760}, 
+  {"class_id":336, "name":"11014007", "relative_coordinates":{"center_x":0.593673, "center_y":0.153863, "width":0.176210, "height":0.289954}, "confidence":0.255636}, 
+  {"class_id":300, "name":"10014003", "relative_coordinates":{"center_x":0.366055, "center_y":0.148677, "width":0.193142, "height":0.277883}, "confidence":0.368758}, 
+  {"class_id":176, "name":"04019001", "relative_coordinates":{"center_x":0.765879, "center_y":0.680752, "width":0.406906, "height":0.451349}, "confidence":0.306367}, 
+  {"class_id":0, "name":"01011001", "relative_coordinates":{"center_x":0.380269, "center_y":0.776239, "width":0.192729, "height":0.312608}, "confidence":0.457476}
+ ] 
+}
+]

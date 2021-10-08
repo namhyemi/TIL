@@ -1,0 +1,12 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampuslama234.jpg", 
+ "objects": [ 
+  {"class_id":239, "name":"08011003", "relative_coordinates":{"center_x":0.778079, "center_y":0.405239, "width":0.141478, "height":0.275373}, "confidence":0.252302}, 
+  {"class_id":6, "name":"01012006", "relative_coordinates":{"center_x":0.370773, "center_y":0.819389, "width":0.188029, "height":0.284159}, "confidence":0.309251}, 
+  {"class_id":5, "name":"01012005", "relative_coordinates":{"center_x":0.369438, "center_y":0.815568, "width":0.180240, "height":0.277007}, "confidence":0.257491}, 
+  {"class_id":1, "name":"01012001", "relative_coordinates":{"center_x":0.371708, "center_y":0.816838, "width":0.174737, "height":0.316044}, "confidence":0.266614}
+ ] 
+}
+]

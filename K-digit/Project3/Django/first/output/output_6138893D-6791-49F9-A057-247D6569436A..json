@@ -1,0 +1,13 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/YeEunNam6138893D-6791-49F9-A057-247D6569436A.jpeg", 
+ "objects": [ 
+  {"class_id":364, "name":"13011008", "relative_coordinates":{"center_x":0.357695, "center_y":0.163640, "width":0.161130, "height":0.211156}, "confidence":0.816887}, 
+  {"class_id":344, "name":"12011003", "relative_coordinates":{"center_x":0.162959, "center_y":0.490662, "width":0.151724, "height":0.209278}, "confidence":0.627867}, 
+  {"class_id":340, "name":"11015001", "relative_coordinates":{"center_x":0.574066, "center_y":0.163847, "width":0.172179, "height":0.220092}, "confidence":0.477787}, 
+  {"class_id":211, "name":"06013002", "relative_coordinates":{"center_x":0.847897, "center_y":0.192693, "width":0.247671, "height":0.303100}, "confidence":0.250735}, 
+  {"class_id":3, "name":"01012003", "relative_coordinates":{"center_x":0.345002, "center_y":0.742729, "width":0.192819, "height":0.277936}, "confidence":0.348972}
+ ] 
+}
+]

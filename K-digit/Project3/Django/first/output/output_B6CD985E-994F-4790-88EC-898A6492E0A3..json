@@ -1,0 +1,11 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/eunjileeB6CD985E-994F-4790-88EC-898A6492E0A3.jpeg", 
+ "objects": [ 
+  {"class_id":344, "name":"12011003", "relative_coordinates":{"center_x":0.785092, "center_y":0.273503, "width":0.199820, "height":0.207560}, "confidence":0.890988}, 
+  {"class_id":291, "name":"10012003", "relative_coordinates":{"center_x":0.768410, "center_y":0.692773, "width":0.291054, "height":0.329431}, "confidence":0.299368}, 
+  {"class_id":3, "name":"01012003", "relative_coordinates":{"center_x":0.117280, "center_y":0.423806, "width":0.169357, "height":0.266704}, "confidence":0.562927}
+ ] 
+}
+]

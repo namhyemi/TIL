@@ -1,0 +1,185 @@
+{% extends 'main/main_base.html'%}
+
+{% load static %}
+{% block style%}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    body {
+        background-color:white;
+    }
+    #wrap {width: 1200px; margin: 0 auto;}
+
+    .upload {
+        float: left; 
+        width: 100%; 
+        border: 1px solid #ebebeb;
+        background-color: rgba(214, 238, 217, 0.829);  
+        margin:4px;
+        text-align:center;
+    } 
+    .check {
+        float: left; 
+        width: 100%;
+        margin-left :4px; margin-right:4px;
+        text-align:center;
+    }
+    .image-button{
+        padding: 6px 25px;
+        background-color: aquamarine;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* 화면 너비 0 ~ 1200px */
+    @media (max-width: 3000px){
+        #wrap {
+            width: 100%;}
+        .upload{
+            width: 100%;
+            height: 100%;
+        }
+        .check {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    /* 화면 너비 0 ~ 768px */
+    @media (max-width: 768px){
+        .upload{
+            width: 100%;
+            height: 100%;
+        }
+        .check {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .Help1 {
+        display: block;
+        margin: auto;
+    }
+
+    .black_background {
+        display: none; 
+        position: absolute; 
+        top: 0%; 
+        left: 0%; 
+        width: 100%; 
+        height: 100%; 
+        background: #666666 ; 
+        z-index:1001; 
+        -moz-opacity: 0.8;
+        opacity:.80; 
+        filter: alpha(opacity=60); 
+    } 
+    .white_content {
+        display: none;
+        position: absolute;
+        z-index:1002;
+        overflow: auto;
+    }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Do+Hyeon&family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+{% endblock style%}
+<!-- "{% static 'main/image/multitest26.jpg' %}" -->
+{% block script %}
+<script>
+    function viewLayer(){
+        document.getElementById("Help1").style.display='block';
+    }
+    function readImg(input){
+        if (input.files && input.files[0]){
+            var reader = new FileReader()
+            reader.onload = function(e){
+                document.getElementById('preview').src = e.target.result;
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+        else{
+            document.getElementById('preview').src = "";
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    function wrapWindowByMask() { 
+        //화면의 높이와 너비를 구한다. 
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width(); 
+        //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다. 
+        $('#fade').css({ 'width': maskWidth, 'height': maskHeight });
+    }
+    /// 화면의 중앙에 레이어띄움 
+    function showLayer() {
+        wrapWindowByMask();
+        $("#light").css("position", "absolute");
+        $("#light").css("top", Math.max(0, (($(window).height() - $("#light").outerHeight()) / 2) + $(window).scrollTop() - 100) + "px");
+        $("#light").css("left", Math.max(0, (($(window).width() - $("#light").outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+        $('#fade').show(); $('#light').show();
+    }
+    function clolse() {
+        $('#fade').hide();
+        $('#light').hide();
+    }
+</script>
+{% endblock script %}
+
+{% block contents %}
+<div id="wrap">
+    
+    <section class="upload" >
+        <br><br>
+        <div class="col">
+            <p style="color: rgb(197, 0, 0); font-family:Verdana, Geneva, Tahoma, sans-serif">
+                촬영 화면은 위쪽에서,<br>음식이 너무 꽉차지 않게 촬영해주세요!<br><br>정확한 분석을 위해<br>선명한 사진을 업로드 해주세요(1MB이상)
+            </p>
+            <img class="img-thumbnail " src="{% static 'main/sampleImage.jpg' %}" style="width: 30%; height: auto; ">
+            <figcaption class="figure-caption" style="margin: 10px;">예시사진</figcaption>
+            <br>
+        </div>
+        <!--<div class="col" style="text-align:center;">
+            <button type="button" class="btn btn-light" onclick="location.href='camera.html'">사진 촬영</button>
+        </div>-->
+    </section>
+    <section class="check">
+        <form method = "post" enctype="multipart/form-data">
+          {% csrf_token %}
+        <div class="custom-file" >
+            <div class="custom-file">
+            <input type="file" id="image" accept="image/*; capture=camera" style="display: none;", name="foodImg", onchange="readImg(this)"><br>
+            <img id="preview" style="width: 50%; height: auto; margin: 20px;">
+            <div class='d-grid gap-2 col-4 mx-auto'>
+                <label class="btn btn-outline-success" for="image">사진 선택</label>
+                <button type="submit" class="btn btn-outline-success" onclick="showLayer();">분석 시작</button>
+            </div>
+            <label class="custom-file-label" for="customFile"></label>  
+            </div>
+        </div>
+        <div id="Help1" style="display: none; text-align: center;">
+            <img src="{% static 'main/loading2.gif' %}">
+        </div>
+        </form>
+    </section>
+</div>
+</div>
+<div id="fade" class="black_background"></div>
+  <div id="light" class="white_content">
+    <div>
+      <h3 style="float:left;"></h3>
+      <div style="text-align:right; vertical-align:text-top;">
+          <img src="{% static 'main/loading2.gif' %}" />
+      </div>
+    </div>
+</div>
+</body>
+{% endblock contents %}

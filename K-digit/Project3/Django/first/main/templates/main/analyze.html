@@ -1,0 +1,555 @@
+{% extends 'main/main_base.html'%}
+{% load static %}
+{% block style%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    
+    body {
+        background-color:white;
+    }
+    #wrap {width: 1200px; padding: 4px; margin: 0 auto;}
+    .entry {
+        float: left; 
+        width: 100%;
+        text-align:center;
+    }
+    .entry #test{
+        text-align:center;
+        width: 30%;
+    }
+    .list {
+        float: left; 
+        width: 100%;
+        text-align:center;
+    }
+
+    /* .upload {float: left; width: 100%; height: 600px; background-color: rgba(214, 238, 217, 0.829);  margin: 4px;} */
+    /* .entry{float: left; width: 100%; height: 400px; background: #f9fff9f5; border:20px greenyellow; margin: 4px;} */
+    
+    /* 화면 너비 0 ~ 1200px */
+    @media (max-width: 1200px){
+        #wrap {
+            width: 100%;
+        }
+        .entry {
+            width: 100%;
+            height: 100%;
+        }
+        .entry #test{
+            text-align:center;
+            width: 350px;
+        }
+        .list {
+            width: 100%;
+            height: 100%;
+        } 
+    }
+    /* 화면 너비 0 ~ 768px */
+    @media (max-width: 700px){
+        .entry {
+            width: 100%;
+            height: 100%;
+        
+        }
+        .entry #test{
+            text-align:center;
+            width:60%;
+            height:auto;
+        }
+        .list {
+            width: 100%;
+            height: 100%;
+        }      
+    }
+    
+    .meal {width:40px; height:40px;}
+
+</style>
+{% endblock style%}
+
+{% block script %}
+{% load static %}
+<datalist id="foodList400">
+    <option value="쌀밥"></option>
+    <option value="잡곡밥"></option>
+    <option value="콩밥"></option>
+    <option value="보리밥"></option>
+    <option value="돌솥밥"></option>
+    <option value="현미밥"></option>
+    <option value="흑미밥"></option>
+    <option value="감자밥"></option>
+    <option value="곤드레밥"></option>
+    <option value="김치볶음밥"></option>
+    <option value="주먹밥"></option>
+    <option value="볶음밥"></option>
+    <option value="일반비빔밥"></option>
+    <option value="전주비빔밥"></option>
+    <option value="삼선볶음밥"></option>
+    <option value="새우볶음밥"></option>
+    <option value="알밥"></option>
+    <option value="산채비빔밥"></option>
+    <option value="오므라이스"></option>
+    <option value="육회비빔밥"></option>
+    <option value="해물볶음밥"></option>
+    <option value="열무비빔밥"></option>
+    <option value="불고기덮밥"></option>
+    <option value="소고기국밥"></option>
+    <option value="송이덮밥"></option>
+    <option value="오징어덮밥"></option>
+    <option value="자장밥"></option>
+    <option value="잡채밥"></option>
+    <option value="잡탕밥"></option>
+    <option value="장어덮밥"></option>
+    <option value="제육덮밥"></option>
+    <option value="짬뽕밥"></option>
+    <option value="순대국밥"></option>
+    <option value="카레라이스"></option>
+    <option value="전주콩나물국밥"></option>
+    <option value="해물덮밥"></option>
+    <option value="회덮밥"></option>
+    <option value="소머리국밥"></option>
+    <option value="돼지국밥"></option>
+    <option value="하이라이스"></option>
+    <option value="김치김밥"></option>
+    <option value="농어초밥"></option>
+    <option value="문어초밥"></option>
+    <option value="새우초밥"></option>
+    <option value="새우튀김롤"></option>
+    <option value="샐러드김밥"></option>
+    <option value="광어초밥"></option>
+    <option value="소고기김밥"></option>
+    <option value="갈비삼각김밥"></option>
+    <option value="연어롤"></option>
+    <option value="연어초밥"></option>
+    <option value="유부초밥"></option>
+    <option value="장어초밥"></option>
+    <option value="참치김밥"></option>
+    <option value="참치마요삼각김밥"></option>
+    <option value="치즈김밥"></option>
+    <option value="캘리포니아롤"></option>
+    <option value="한치초밥"></option>
+    <option value="일반김밥"></option>
+    <option value="간자장"></option>
+    <option value="굴짬뽕"></option>
+    <option value="기스면"></option>
+    <option value="김치라면"></option>
+    <option value="김치우동"></option>
+    <option value="김치말이국수"></option>
+    <option value="닭칼국수"></option>
+    <option value="들깨칼국수"></option>
+    <option value="떡라면"></option>
+    <option value="라면"></option>
+    <option value="막국수"></option>
+    <option value="메밀국수"></option>
+    <option value="물냉면"></option>
+    <option value="비빔국수"></option>
+    <option value="비빔냉면"></option>
+    <option value="삼선우동"></option>
+    <option value="삼선자장면"></option>
+    <option value="삼선짬뽕"></option>
+    <option value="수제비"></option>
+    <option value="쌀국수"></option>
+    <option value="열무김치국수"></option>
+    <option value="오일소스스파게티"></option>
+    <option value="일식우동"></option>
+    <option value="볶음우동"></option>
+    <option value="자장면"></option>
+    <option value="잔치국수"></option>
+    <option value="짬뽕"></option>
+    <option value="짬뽕라면"></option>
+    <option value="쫄면"></option>
+    <option value="치즈라면"></option>
+    <option value="콩국수"></option>
+    <option value="크림소스스파게티"></option>
+    <option value="토마토소스스파게티"></option>
+    <option value="해물칼국수"></option>
+    <option value="회냉면"></option>
+    <option value="떡국"></option>
+    <option value="떡만두국"></option>
+    <option value="짜장라면"></option>
+    <option value="고기만두"></option>
+    <option value="군만두"></option>
+    <option value="김치만두"></option>
+    <option value="물만두"></option>
+    <option value="만둣국"></option>
+    <option value="게살죽"></option>
+    <option value="깨죽"></option>
+    <option value="닭죽"></option>
+    <option value="소고기버섯죽"></option>
+    <option value="어죽"></option>
+    <option value="잣죽"></option>
+    <option value="전복죽"></option>
+    <option value="참치죽"></option>
+    <option value="채소죽"></option>
+    <option value="팥죽"></option>
+    <option value="호박죽"></option>
+    <option value="콘스프"></option>
+    <option value="토마토스프"></option>
+    <option value="굴국"></option>
+    <option value="김치국"></option>
+    <option value="달걀국"></option>
+    <option value="감자국"></option>
+    <option value="미역국"></option>
+    <option value="바지락조개국"></option>
+    <option value="소고기무국"></option>
+    <option value="소고기미역국"></option>
+    <option value="순대국"></option>
+    <option value="어묵국"></option>
+    <option value="오징어국"></option>
+    <option value="토란국"></option>
+    <option value="탕국"></option>
+    <option value="홍합미역국"></option>
+    <option value="황태해장국"></option>
+    <option value="근대된장국"></option>
+    <option value="미소된장국"></option>
+    <option value="배추된장국"></option>
+    <option value="뼈다귀해장국"></option>
+    <option value="선지(해장)국"></option>
+    <option value="콩나물국"></option>
+    <option value="시금치된장국"></option>
+    <option value="시래기된장국"></option>
+    <option value="쑥된장국"></option>
+    <option value="아욱된장국"></option>
+    <option value="우거지된장국"></option>
+    <option value="우거지해장국"></option>
+    <option value="우렁된장국"></option>
+    <option value="갈비탕"></option>
+    <option value="감자탕"></option>
+    <option value="곰탕"></option>
+    <option value="매운탕"></option>
+    <option value="꼬리곰탕"></option>
+    <option value="꽃게탕"></option>
+    <option value="낙지탕"></option>
+    <option value="내장탕"></option>
+    <option value="닭곰탕"></option>
+    <option value="닭볶음탕"></option>
+    <option value="지리탕"></option>
+    <option value="도가니탕"></option>
+    <option value="삼계탕"></option>
+    <option value="설렁탕"></option>
+    <option value="알탕"></option>
+    <option value="연포탕"></option>
+    <option value="오리탕"></option>
+    <option value="추어탕"></option>
+    <option value="해물탕"></option>
+    <option value="닭개장"></option>
+    <option value="육개장"></option>
+    <option value="뼈해장국"></option>
+    <option value="미역오이냉국"></option>
+    <option value="고등어찌개"></option>
+    <option value="꽁치찌개"></option>
+    <option value="동태찌개"></option>
+    <option value="부대찌개"></option>
+    <option value="된장찌개"></option>
+    <option value="청국장찌개"></option>
+    <option value="두부전골"></option>
+    <option value="곱창전골"></option>
+    <option value="소고기전골"></option>
+    <option value="국수전골"></option>
+    <option value="돼지고기김치찌개"></option>
+    <option value="버섯찌개"></option>
+    <option value="참치김치찌개"></option>
+    <option value="순두부찌개"></option>
+    <option value="콩비지찌개"></option>
+    <option value="햄김치찌개"></option>
+    <option value="호박찌개"></option>
+    <option value="고추장찌개"></option>
+    <option value="대구찜"></option>
+    <option value="도미찜"></option>
+    <option value="문어숙회"></option>
+    <option value="아귀찜"></option>
+    <option value="조기찜"></option>
+    <option value="참꼬막"></option>
+    <option value="해물찜"></option>
+    <option value="소갈비찜"></option>
+    <option value="돼지갈비찜"></option>
+    <option value="돼지고기수육"></option>
+    <option value="찜닭"></option>
+    <option value="족발"></option>
+    <option value="달걀찜"></option>
+    <option value="닭갈비"></option>
+    <option value="닭꼬치"></option>
+    <option value="돼지갈비"></option>
+    <option value="떡갈비"></option>
+    <option value="불고기"></option>
+    <option value="소곱창구이"></option>
+    <option value="소양념갈비구이"></option>
+    <option value="소불고기"></option>
+    <option value="양념왕갈비"></option>
+    <option value="햄버거 스테이크"></option>
+    <option value="훈제오리"></option>
+    <option value="치킨데리야끼"></option>
+    <option value="치킨윙"></option>
+    <option value="더덕구이"></option>
+    <option value="양배추구이"></option>
+    <option value="두부구이"></option>
+    <option value="삼치구이"></option>
+    <option value="가자미전"></option>
+    <option value="굴전"></option>
+    <option value="동태전"></option>
+    <option value="해물파전"></option>
+    <option value="동그랑땡"></option>
+    <option value="햄부침"></option>
+    <option value="육전"></option>
+    <option value="감자전"></option>
+    <option value="고추전"></option>
+    <option value="김치전"></option>
+    <option value="깻잎전"></option>
+    <option value="녹두빈대떡"></option>
+    <option value="미나리전"></option>
+    <option value="배추전"></option>
+    <option value="버섯전"></option>
+    <option value="부추전"></option>
+    <option value="야채전"></option>
+    <option value="파전"></option>
+    <option value="호박부침개"></option>
+    <option value="호박전"></option>
+    <option value="달걀말이"></option>
+    <option value="두부부침"></option>
+    <option value="두부전"></option>
+    <option value="건새우볶음"></option>
+    <option value="낙지볶음"></option>
+    <option value="멸치볶음"></option>
+    <option value="어묵볶음"></option>
+    <option value="오징어볶음"></option>
+    <option value="오징어채볶음"></option>
+    <option value="주꾸미볶음"></option>
+    <option value="해물볶음"></option>
+    <option value="감자볶음"></option>
+    <option value="김치볶음"></option>
+    <option value="깻잎나물볶음"></option>
+    <option value="느타리버섯볶음"></option>
+    <option value="두부김치"></option>
+    <option value="머위나물볶음"></option>
+    <option value="양송이버섯볶음"></option>
+    <option value="표고버섯볶음"></option>
+    <option value="고추잡채"></option>
+    <option value="호박볶음"></option>
+    <option value="돼지고기볶음"></option>
+    <option value="돼지껍데기볶음"></option>
+    <option value="소세지볶음"></option>
+    <option value="순대볶음"></option>
+    <option value="오리불고기"></option>
+    <option value="오삼불고기"></option>
+    <option value="떡볶이"></option>
+    <option value="라볶이"></option>
+    <option value="마파두부"></option>
+    <option value="가자미조림"></option>
+    <option value="갈치조림"></option>
+    <option value="고등어조림"></option>
+    <option value="꽁치조림"></option>
+    <option value="동태조림"></option>
+    <option value="북어조림"></option>
+    <option value="조기조림"></option>
+    <option value="코다리조림"></option>
+    <option value="달걀장조림"></option>
+    <option value="메추리알장조림"></option>
+    <option value="돼지고기메추리알장조림"></option>
+    <option value="소고기메추리알장조림"></option>
+    <option value="고추조림"></option>
+    <option value="감자조림"></option>
+    <option value="우엉조림"></option>
+    <option value="감자조림"></option>
+    <option value="(검은)콩조림"></option>
+    <option value="콩조림"></option>
+    <option value="두부고추장조림"></option>
+    <option value="땅콩조림"></option>
+    <option value="미꾸라지튀김"></option>
+    <option value="새우튀김"></option>
+    <option value="생선가스"></option>
+    <option value="쥐포튀김"></option>
+    <option value="오징어튀김"></option>
+    <option value="닭강정"></option>
+    <option value="닭튀김"></option>
+    <option value="돈가스"></option>
+    <option value="모래집튀김"></option>
+    <option value="양념치킨"></option>
+    <option value="치즈돈가스"></option>
+    <option value="치킨가스"></option>
+    <option value="탕수육"></option>
+    <option value="깐풍기"></option>
+    <option value="감자튀김"></option>
+    <option value="고구마맛탕"></option>
+    <option value="고구마튀김"></option>
+    <option value="고추튀김"></option>
+    <option value="김말이튀김"></option>
+    <option value="채소튀김"></option>
+    <option value="노각무침"></option>
+    <option value="단무지무침"></option>
+    <option value="달래나물무침"></option>
+    <option value="더덕무침"></option>
+    <option value="도라지생채"></option>
+    <option value="도토리묵"></option>
+    <option value="마늘쫑무침"></option>
+    <option value="무생채"></option>
+    <option value="무말랭이"></option>
+    <option value="오이생채"></option>
+    <option value="파무침"></option>
+    <option value="상추겉절이"></option>
+    <option value="쑥갓나물무침"></option>
+    <option value="청포묵무침"></option>
+    <option value="해파리냉채"></option>
+    <option value="가지나물무침"></option>
+    <option value="고사리나물"></option>
+    <option value="도라지나물"></option>
+    <option value="무나물"></option>
+    <option value="미나리나물"></option>
+    <option value="숙주나물"></option>
+    <option value="시금치나물"></option>
+    <option value="취나물"></option>
+    <option value="콩나물"></option>
+    <option value="고구마줄기나물"></option>
+    <option value="우거지나물무침"></option>
+    <option value="골뱅이무침"></option>
+    <option value="김무침"></option>
+    <option value="미역초무침"></option>
+    <option value="북어채무침"></option>
+    <option value="회무침"></option>
+    <option value="쥐치채"></option>
+    <option value="파래무침"></option>
+    <option value="홍어무침"></option>
+    <option value="골뱅이국수무침"></option>
+    <option value="오징어무침"></option>
+    <option value="잡채"></option>
+    <option value="탕평채"></option>
+    <option value="갓김치"></option>
+    <option value="고들빼기"></option>
+    <option value="깍두기"></option>
+    <option value="깻잎김치"></option>
+    <option value="나박김치"></option>
+    <option value="동치미"></option>
+    <option value="배추겉절이"></option>
+    <option value="배추김치"></option>
+    <option value="백김치"></option>
+    <option value="부추김치"></option>
+    <option value="열무김치"></option>
+    <option value="열무얼갈이김치"></option>
+    <option value="오이소박이"></option>
+    <option value="총각김치"></option>
+    <option value="파김치"></option>
+    <option value="간장게장"></option>
+    <option value="마늘쫑장아찌"></option>
+    <option value="고추장아찌"></option>
+    <option value="깻잎장아찌"></option>
+    <option value="마늘장아찌"></option>
+    <option value="무장아찌"></option>
+    <option value="양념게장"></option>
+    <option value="양파장아찌"></option>
+    <option value="오이지"></option>
+    <option value="무피클"></option>
+    <option value="오이피클"></option>
+    <option value="단무지"></option>
+    <option value="오징어젓갈"></option>
+    <option value="명란젓"></option>
+    <option value="생연어"></option>
+    <option value="생선물회"></option>
+    <option value="광어회"></option>
+    <option value="훈제연어"></option>
+    <option value="육회"></option>
+    <option value="육사시미"></option>
+    <option value="가래떡"></option>
+    <option value="경단"></option>
+    <option value="꿀떡"></option>
+    <option value="시루떡"></option>
+    <option value="메밀전병"></option>
+    <option value="찰떡"></option>
+    <option value="무지개떡"></option>
+    <option value="백설기"></option>
+    <option value="송편"></option>
+    <option value="수수부꾸미"></option>
+    <option value="수수팥떡"></option>
+    <option value="쑥떡"></option>
+    <option value="약식"></option>
+    <option value="인절미"></option>
+    <option value="절편"></option>
+    <option value="증편"></option>
+    <option value="찹쌀떡"></option>
+    <option value="매작과"></option>
+    <option value="다식"></option>
+    <option value="약과"></option>
+    <option value="유과"></option>
+    <option value="산자"></option>
+    <option value="깨강정"></option>
+</datalist>
+<script>
+    const add_textbox = (food='', gram='') => {
+        const box = document.getElementById('box');
+        const newP = document.createElement('p');
+        newP.innerHTML = "<input style='display: inline; width: 120px;' type='text' value='" + food + "' autocomplete='off' name='foodName' list='foodList400' placeholder='음식이름'> \
+                    <input type='text' value='" + gram + "' autocomplete='off' name='foodGram' style='width: 40px;text-align:right ;'> g\
+                    <input type='button' class='bg-opacity-25 bg-success-sm rounded bg-success text-dark border border-white' value='삭제' onclick='remove(this)'>";
+
+
+        box.appendChild(newP);
+    }
+    const remove = (obj) => {
+        document.getElementById('box').removeChild(obj.parentNode);
+    }
+</script>
+{% endblock script %}
+
+{% block contents %}
+<div id="wrap">
+    <!-- <section class="upload" style="text-align:center;">
+        <img src="{% static 'main/image/' %}{{imageName}}" alt="NO!!!" width="500" height=auto><br>
+    </section> -->
+
+    <section class="analyze">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="entry" style="text-align:center;">
+                <div>    
+                    <br>
+                    <img id="test" class="border border-5 rounded mx-auto d-block"  src="{% static 'main/predictions.jpg/' %}" >
+                    <br>
+                </div>
+                <div>
+                    <input type="date" name="eatDate" id="eatDate" class="bg-success p-2 text-white rounded bg-opacity-75" style="border:1px solid transparent;" required="required">
+                    <!-- <input type="date" name="eatDate" id="eatDate" class="btn btn-outline-success" style="border:1px solid transparent;" required="required"> -->
+                    <script>
+                        document.getElementById('eatDate').value=new Date(new Date() - (new Date().getTimezoneOffset() * 60000)).toISOString().substring(0, 10);
+                    </script>
+                </div>
+                <br>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-success">
+                        <input type="radio" name="eatTime" id="option1" value="B" autocomplete="off" checked>
+                        <img class="meal" src="https://cdn-icons-png.flaticon.com/512/3892/3892928.png"> 아침
+                    </label>
+                    <label class="btn btn-outline-success">
+                        <input type="radio" name="eatTime" id="option2" value="L" autocomplete="off">
+                        <img class="meal" src="https://cdn-icons-png.flaticon.com/512/4517/4517048.png"> 점심
+                    </label>
+                    <label class="btn btn-outline-success">
+                        <input type="radio" name="eatTime" id="option3" value="D" autocomplete="off">
+                        <img class="meal" src="https://cdn-icons-png.flaticon.com/512/2987/2987960.png"> 저녁
+                    </label>
+                </div>
+
+            </div>
+            <div class="list" id="box"> 
+                <br>
+                <input type="button" class="btn btn-outline-success" style="border:1px solid transparent;" id="inputfood" value="음식을 추가하려면 누르세요" onclick="add_textbox()"><br><br>
+                {% for food in detectFoodList %}
+                    <script type="text/javascript">
+                        var a = "{{food.food_name}}";
+                        var b = "{{food.number_1회_제공량_g_field}}";
+                        add_textbox(a, b);
+                    </script>
+                {% endfor %}
+                <input type="hidden" id="imageName" name="imageName" value="main/image/{{userName}}{{imageName}}">
+            </div>
+            <div style="text-align: right;">
+                <br><button class="btn btn-success" style="margin-right: 50px;" type="submit">완료</button>
+            </div>
+        </form>
+    </section>
+</div>
+{% endblock contents %}

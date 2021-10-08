@@ -1,0 +1,11 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampustest_image13.jpg", 
+ "objects": [ 
+  {"class_id":349, "name":"12011008", "relative_coordinates":{"center_x":0.570567, "center_y":0.335483, "width":0.123581, "height":0.082218}, "confidence":0.315613}, 
+  {"class_id":174, "name":"04018003", "relative_coordinates":{"center_x":0.783140, "center_y":0.515700, "width":0.279483, "height":0.191202}, "confidence":0.356796}, 
+  {"class_id":12, "name":"01014004", "relative_coordinates":{"center_x":0.200050, "center_y":0.574047, "width":0.305472, "height":0.404951}, "confidence":0.415598}
+ ] 
+}
+]

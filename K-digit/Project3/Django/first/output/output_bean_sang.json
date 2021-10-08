@@ -1,0 +1,14 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampusbean_sang.jpg", 
+ "objects": [ 
+  {"class_id":343, "name":"12011002", "relative_coordinates":{"center_x":0.448968, "center_y":0.617684, "width":0.132728, "height":0.170300}, "confidence":0.424692}, 
+  {"class_id":271, "name":"09011008", "relative_coordinates":{"center_x":0.725619, "center_y":0.631768, "width":0.211743, "height":0.283117}, "confidence":0.252816}, 
+  {"class_id":266, "name":"09011003", "relative_coordinates":{"center_x":0.729091, "center_y":0.631983, "width":0.250496, "height":0.262194}, "confidence":0.295837}, 
+  {"class_id":177, "name":"04019002", "relative_coordinates":{"center_x":0.312306, "center_y":0.273870, "width":0.228879, "height":0.230725}, "confidence":0.275282}, 
+  {"class_id":63, "name":"02011005", "relative_coordinates":{"center_x":0.317378, "center_y":0.275020, "width":0.231910, "height":0.244028}, "confidence":0.258984}, 
+  {"class_id":6, "name":"01012006", "relative_coordinates":{"center_x":0.636135, "center_y":0.180592, "width":0.203998, "height":0.258979}, "confidence":0.669218}
+ ] 
+}
+]

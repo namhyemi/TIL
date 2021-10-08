@@ -1,0 +1,408 @@
+{% extends 'main/main_base.html'%}
+{% load static %}
+
+{% block style%}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Do Hyeon', sans-serif;
+    }
+
+    body {
+        background-color: white;
+    }
+    #wrap {width: 1200px; padding: 4px; margin: auto;}
+
+    .heatmap{
+        float: left; 
+        width: 100%; 
+        height: 150px;
+    }
+
+    
+    /* 화면 너비 0 ~ 1200px */
+    @media (max-width: 1200px){
+        #wrap {
+            width: 100%;
+        }
+        .heatmap {
+            width: 100%;
+            height: 150px;
+        }
+    }
+    /* 화면 너비 0 ~ 768px */
+    @media (max-width: 768px){
+        .heatmap{
+            width: 100%;
+            height: 150px;
+            /* height: 150%;*/
+            margin: 0;
+            padding: 0;
+        }
+    }
+</style>
+{% endblock style%}
+
+
+
+{% block script %}
+<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-heatmap.min.js"></script>
+
+<!-- 칼로리 -->
+<div id="cal_list" style="display: none;">
+    {% for cal in 칼로리_list %}
+        {{cal.date}} {{cal.칼로리}},
+    {% endfor %}
+</div>
+<!-- 단백질 -->
+<div id="protein_list" style="display: none;">
+    {% for protein in 단백질_list %}
+        {{protein.date}} {{protein.단백질}},
+    {% endfor %}
+</div>
+<!-- 탄수화물 -->
+<div id="carbohydrate_list" style="display: none;">
+    {% for carbohydrate in 탄수화물_list %}
+        {{carbohydrate.date}} {{carbohydrate.탄수화물}},
+    {% endfor %}
+</div>
+<!-- 지방 -->
+<div id="fat_list" style="display: none;">
+    {% for fat in 지방_list %}
+        {{fat.date}} {{fat.지방}},
+    {% endfor %}
+</div>
+<!-- 나트륨 -->
+<div id="salt_list" style="display: none;">
+    {% for salt in 나트륨_list %}
+        {{salt.date}} {{salt.나트륨}},
+    {% endfor %}
+</div>
+<!-- 총당류 -->
+<div id="sugar_list" style="display: none;">
+    {% for sugar in 총당류_list %}
+        {{sugar.date}} {{sugar.총당류}},
+    {% endfor %}
+</div>
+<!-- 콜레스테롤 -->
+<div id="cholesterol_list" style="display: none;">
+    {% for cholesterol in 콜레스테롤_list %}
+        {{cholesterol.date}} {{cholesterol.콜레스테롤}},
+    {% endfor %}
+</div>
+<!-- 총포화지방산 -->
+<div id="sf_list" style="display: none;">
+    {% for sf in 총포화지방산_list %}
+        {{sf.date}} {{sf.총포화지방산}},
+    {% endfor %}
+</div>
+<!-- 트랜스지방산 -->
+<div id="tf_list" style="display: none;">
+    {% for tf in 트랜스지방산_list %}
+        {{tf.date}} {{tf.트랜스지방산}},
+    {% endfor %}
+</div>
+
+
+<script type="text/javascript">
+
+    // create the data 
+    // 칼로리
+    // console.log(document.getElementById('cal_list').innerText);
+    var data_list = document.getElementById('cal_list').innerText.split(',');
+    var cal_data = new Array();
+
+    for(var idx=0 ; idx < data_list.length-1 ; idx++){
+        var data = (data_list[idx].trim().split(' '))
+	    // cal_data.push({x : data[0], y :'칼로리', heat : data[1]})
+        cal_data.push({x : data[0], y:' ',heat : data[1]})
+    }
+
+    // 단백질
+    var data_list = document.getElementById('protein_list').innerText.split(',');
+    var protein_data = new Array();
+    
+    for(var idx=0 ; idx < data_list.length-1 ; idx++){
+        var data = (data_list[idx].trim().split(' '))
+	    // protein_data.push({x : data[0], y :'단백질', heat : data[1]})
+        protein_data.push({x : data[0], y :' ', heat : data[1]})
+    }
+
+    // 탄수화물
+    var data_list = document.getElementById('carbohydrate_list').innerText.split(',');
+    var carbohydrate_data = new Array();
+    
+    for(var idx=0 ; idx < data_list.length-1 ; idx++){
+        var data = (data_list[idx].trim().split(' '))
+	    // carbohydrate_data.push({x : data[0], y :'탄수화물', heat : data[1]})
+        carbohydrate_data.push({x : data[0], y :' ', heat : data[1]})
+    }
+
+    // 지방
+    var data_list = document.getElementById('fat_list').innerText.split(',');
+    var fat_data = new Array();
+    
+    for(var idx=0 ; idx < data_list.length-1 ; idx++){
+        var data = (data_list[idx].trim().split(' '))
+	    // fat_data.push({x : data[0], y :'지방', heat : data[1]})
+	    fat_data.push({x : data[0], y :' ', heat : data[1]})
+    }
+
+    // 나트륨
+    var data_list = document.getElementById('salt_list').innerText.split(',');
+    var salt_data = new Array();
+    
+    for(var idx=0 ; idx < data_list.length-1 ; idx++){
+        var data = (data_list[idx].trim().split(' '))
+	    // salt_data.push({x : data[0], y :'나트륨', heat : data[1]})
+	    salt_data.push({x : data[0], y :' ', heat : data[1]})
+    }
+
+    // 총당류
+    var data_list = document.getElementById('sugar_list').innerText.split(',');
+    var sugar_data = new Array();
+    
+    for(var idx=0 ; idx < data_list.length-1 ; idx++){
+        var data = (data_list[idx].trim().split(' '))
+	    // sugar_data.push({x : data[0], y :'총당류', heat : data[1]})
+	    sugar_data.push({x : data[0], y :' ', heat : data[1]})
+    }
+
+    // 콜레스테롤
+    var data_list = document.getElementById('cholesterol_list').innerText.split(',');
+    var cholesterol_data = new Array();
+    
+    for(var idx=0 ; idx < data_list.length-1 ; idx++){
+        var data = (data_list[idx].trim().split(' '))
+	    // cholesterol_data.push({x : data[0], y :'콜레스테롤', heat : data[1]})
+	    cholesterol_data.push({x : data[0], y :' ', heat : data[1]})
+    }
+
+    // 총포화지방산
+    var data_list = document.getElementById('sf_list').innerText.split(',');
+    var sf_data = new Array();
+    for(var idx=0 ; idx < data_list.length-1 ; idx++){
+        var data = (data_list[idx].trim().split(' '))
+	    // sf_data.push({x : data[0], y :'총포화지방산', heat : data[1]})
+	    sf_data.push({x : data[0], y :' ', heat : data[1]})
+    }
+
+    // 트랜스지방산
+    var data_list = document.getElementById('tf_list').innerText.split(',');
+    var tf_data = new Array();
+    for(var idx=0 ; idx < data_list.length-1 ; idx++){
+        var data = (data_list[idx].trim().split(' '))
+	    // tf_data.push({x : data[0], y :'트랜스지방산', heat : data[1]})
+	    tf_data.push({x : data[0], y :' ', heat : data[1]})
+    }
+
+</script>
+
+
+<script>
+    // anychart.onDocumentReady(function () {
+    //     chart1 = anychart.heatMap(cal_data); // 칼로리
+    //     chart1.title("칼로리 (kcal) " + "권장량 : {{기준_list.base_에너지}}kcal");
+    //     chart1.legend(true);
+    //     chart1.labels().format("{%heat}kcal");
+    //     chart1.tooltip().format("{%heat}kcal");
+    //     var customColorScale1 = anychart.scales.ordinalColor();
+    //     customColorScale1.ranges([
+    //     { less: "{{기준_list.base_에너지}}", name: '적정량 섭취' , color: '#69A231'}, 
+    //     { greater: "{{기준_list.base_에너지}}", name: '권장량 초과', color: '#CF7A78'}
+    //     ]);
+    //     chart1.colorScale(customColorScale1);
+    //     chart1.container("container1");
+    //     chart1.draw();
+
+    // });
+
+    anychart.onDocumentReady(function () {
+
+    // create the chart and set the data
+    chart1 = anychart.heatMap(cal_data); // 칼로리
+    chart2 = anychart.heatMap(protein_data); // 단백질
+    chart3 = anychart.heatMap(carbohydrate_data); // 탄수화물
+    chart4 = anychart.heatMap(fat_data); // 지방
+    chart5 = anychart.heatMap(salt_data); // 나트륨
+    chart6 = anychart.heatMap(sugar_data); // 총당류
+    chart7 = anychart.heatMap(cholesterol_data); // 콜레스테롤
+    chart8 = anychart.heatMap(sf_data); // 총포화지방산
+    chart9 = anychart.heatMap(tf_data); // 트랜스지방산
+      
+    // set the chart title
+    chart1.title("칼로리 (kcal) 권장량 : {{기준_list.base_에너지}}kcal");
+    chart2.title("단백질 (g) 권장량 : {{기준_list.base_단백질}}g");
+    chart3.title("탄수화물 (g) 권장량 : {{기준_list.base_탄수화물}}g");
+    chart4.title("지방 (g) 권장량 : {{기준_list.base_지방}}g");
+    chart5.title("나트륨 (mg) 권장량 : {{기준_list.base_나트륨}}mg");
+    chart6.title("총당류 (g) 권장량 : {{기준_list.base_총당류}}g");
+    chart7.title("콜레스테롤 (mg) 권장량 : {{기준_list.base_콜레스테롤}}mg");
+    chart8.title("총포화지방산 (g) 권장량 : {{기준_list.base_총포화지방산}}g");
+    chart9.title("트랜스지방산 (g) 권장량 : {{기준_list.base_트랜스지방산}}g");
+      
+    // 범위 보여줌
+    chart1.legend(true); 
+    chart2.legend(true);
+    chart3.legend(true);
+    chart4.legend(true);
+    chart5.legend(true);
+    chart6.legend(true);
+    chart7.legend(true);
+    chart8.legend(true);
+    chart9.legend(true);
+
+    // 차트 안에 글씨 없애기 
+    // chart.labels().enabled(false)
+
+    // 차트 안에 글씨 형태 ex) 15 -> 15%
+    chart1.labels().format("{%heat}kcal"); 
+    chart2.labels().format("{%heat}g"); 
+    chart3.labels().format("{%heat}g"); 
+    chart4.labels().format("{%heat}g");
+    chart5.labels().format("{%heat}mg");  
+    chart6.labels().format("{%heat}g"); 
+    chart7.labels().format("{%heat}mg"); 
+    chart8.labels().format("{%heat}g"); 
+    chart9.labels().format("{%heat}g"); 
+
+    // configure tooltips : 클릭 시 나타나는 창 출력 형태
+    chart1.tooltip().format("{%heat}kcal");
+    chart2.tooltip().format("{%heat}g");
+    chart3.tooltip().format("{%heat}g");
+    chart4.tooltip().format("{%heat}g");
+    chart5.tooltip().format("{%heat}mg");
+    chart6.tooltip().format("{%heat}g");
+    chart7.tooltip().format("{%heat}mg");
+    chart8.tooltip().format("{%heat}g");
+    chart9.tooltip().format("{%heat}g");
+
+    // create and configure the color scale.(칼로리)
+    var customColorScale1 = anychart.scales.ordinalColor();
+        customColorScale1.ranges([
+        { less: "{{기준_list.base_에너지}}", name: '적정량 섭취' , color: '#69A231'}, 
+        { greater: "{{기준_list.base_에너지}}", name: '권장량 초과', color: '#CF7A78'}
+        ]);
+        //  <='+"{{기준_list.base_에너지}}"
+
+
+    // create and configure the color scale.(단백질)
+    var customColorScale2 = anychart.scales.ordinalColor();
+        customColorScale2.ranges([
+        { less:"{{기준_list.base_단백질}}", name: '적정량 섭취', color: '#69A231' }, 
+        { greater: "{{기준_list.base_단백질}}", name: '권장량 초과', color: '#CF7A78' }
+        ]);
+    
+    // create and configure the color scale.(탄수화물)
+    var customColorScale3 = anychart.scales.ordinalColor();
+        customColorScale3.ranges([
+        { less: "{{기준_list.base_탄수화물}}", name: '적정량 섭취', color: '#69A231'  }, 
+        { greater: "{{기준_list.base_탄수화물}}", name: '권장량 초과', color: '#CF7A78' }
+        ]);
+
+    // create and configure the color scale.(지방)
+    var customColorScale4 = anychart.scales.ordinalColor();
+        customColorScale4.ranges([
+        { less: "{{기준_list.base_지방}}", name: '적정량 섭취', color: '#69A231'}, 
+        { greater: "{{기준_list.base_지방}}", name: '권장량 초과', color:  '#CF7A78' }
+        ]);
+    
+    // // create and configure the color scale.(나트륨)
+    var customColorScale5 = anychart.scales.ordinalColor();
+        customColorScale5.ranges([
+        { less: "{{기준_list.base_나트륨}}", name: '적정량 섭취', color: '#69A231' }, 
+        { greater: "{{기준_list.base_나트륨}}", name: '권장량 초과', color: '#CF7A78' }
+        ]);
+
+    // create and configure the color scale.(총당류)
+    var customColorScale6 = anychart.scales.ordinalColor();
+        customColorScale6.ranges([
+        { less: "{{기준_list.base_총당류}}", name: '적정량 섭취', color: '#69A231'}, 
+        { greater: "{{기준_list.base_총당류}}", name: '권장량 초과', color: '#CF7A78' }
+        ]);
+
+    // create and configure the color scale.(콜레스테롤)
+    var customColorScale7 = anychart.scales.ordinalColor();
+        customColorScale7.ranges([
+        { less: "{{기준_list.base_콜레스테롤}}", name: '적정량 섭취', color:'#69A231' }, 
+        { greater: "{{기준_list.base_콜레스테롤}}", name: '권장량 초과', color: '#CF7A78' }
+        ]);
+
+    // create and configure the color scale.(총포화지방산)
+    var customColorScale8 = anychart.scales.ordinalColor();
+        customColorScale8.ranges([
+        { less: "{{기준_list.base_총포화지방산}}", name: '적정량 섭취', color: '#69A231' }, 
+        { greater: "{{기준_list.base_총포화지방산}}", name: '권장량 초과', color: '#CF7A78'}
+        ]);
+
+    // create and configure the color scale.(트랜스지방산)
+    var customColorScale9 = anychart.scales.ordinalColor();
+        customColorScale9.ranges([
+        { less: "{{기준_list.base_총포화지방산}}", name: '적정량 섭취', color: '#69A231' }, 
+        { greater: "{{기준_list.base_총포화지방산}}", name: '권장량 초과', color: '#CF7A78' }
+        ]);
+
+        
+    // set the color scale as the color scale of the chart
+    chart1.colorScale(customColorScale1);
+    chart2.colorScale(customColorScale2);
+    chart3.colorScale(customColorScale3);
+    chart4.colorScale(customColorScale4);
+    chart5.colorScale(customColorScale5);
+    chart6.colorScale(customColorScale6);
+    chart7.colorScale(customColorScale7);
+    chart8.colorScale(customColorScale8);
+    chart9.colorScale(customColorScale9);
+
+    
+    // set the container id
+    chart1.container("container");
+    chart2.container("container");
+    chart3.container("container");
+    chart4.container("container");
+    chart5.container("container");
+    chart6.container("container");
+    chart7.container("container");
+    chart8.container("container");
+    chart9.container("container");
+
+
+    // initiate drawing the chart
+    chart1.draw();
+    chart2.draw();
+    chart3.draw();
+    chart4.draw();
+    chart5.draw();
+    chart6.draw();
+    chart7.draw();
+    chart8.draw();
+    chart9.draw();
+    });
+</script>
+
+<script>
+    function AutoSubmit(){
+        document.calendar.submit();
+    }
+</script>
+{% endblock script %}
+
+
+{% block contents %}
+<div style="text-align: center;">
+    <form method = "POST" enctype="multipart/form-data" name="calendar">
+        {% csrf_token %}
+        <br><input type="date" id="mainDate" name="mainDate" onchange="AutoSubmit()" value="{{mainTime}}"  required="required"/>
+    </form>
+</div>
+<div>
+    
+</div>
+<div id="wrap">
+    <!-- <div class='heatmap1' id="container1"></div> -->
+    <div class='heatmap' id="container"></div>
+</div>
+<!-- <div class='heatmap2' id="container2"></div> -->
+{% endblock contents %}

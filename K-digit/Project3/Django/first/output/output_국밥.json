@@ -1,0 +1,14 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampus국밥.jpg", 
+ "objects": [ 
+  {"class_id":361, "name":"13011005", "relative_coordinates":{"center_x":0.217544, "center_y":0.420805, "width":0.120469, "height":0.170628}, "confidence":0.970782}, 
+  {"class_id":349, "name":"12011008", "relative_coordinates":{"center_x":0.390526, "center_y":0.300443, "width":0.154528, "height":0.286589}, "confidence":0.382286}, 
+  {"class_id":348, "name":"12011007", "relative_coordinates":{"center_x":0.390713, "center_y":0.308451, "width":0.177423, "height":0.248062}, "confidence":0.500166}, 
+  {"class_id":344, "name":"12011003", "relative_coordinates":{"center_x":0.662526, "center_y":0.264520, "width":0.186019, "height":0.246132}, "confidence":0.915031}, 
+  {"class_id":111, "name":"03011010", "relative_coordinates":{"center_x":0.771231, "center_y":0.523360, "width":0.144583, "height":0.170932}, "confidence":0.947676}, 
+  {"class_id":3, "name":"01012003", "relative_coordinates":{"center_x":0.192657, "center_y":0.779082, "width":0.198357, "height":0.236803}, "confidence":0.428414}
+ ] 
+}
+]

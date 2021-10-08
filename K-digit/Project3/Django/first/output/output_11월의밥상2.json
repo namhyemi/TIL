@@ -1,0 +1,13 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampus11월의밥상2.jpg", 
+ "objects": [ 
+  {"class_id":230, "name":"07013010", "relative_coordinates":{"center_x":0.153608, "center_y":0.342549, "width":0.169646, "height":0.154049}, "confidence":0.258044}, 
+  {"class_id":229, "name":"07013009", "relative_coordinates":{"center_x":0.438421, "center_y":0.325122, "width":0.164992, "height":0.118298}, "confidence":0.937589}, 
+  {"class_id":229, "name":"07013009", "relative_coordinates":{"center_x":0.154063, "center_y":0.343875, "width":0.173870, "height":0.159727}, "confidence":0.340962}, 
+  {"class_id":196, "name":"05013001", "relative_coordinates":{"center_x":0.128300, "center_y":0.535043, "width":0.171355, "height":0.183255}, "confidence":0.833652}, 
+  {"class_id":0, "name":"01011001", "relative_coordinates":{"center_x":0.363398, "center_y":0.628078, "width":0.185772, "height":0.139357}, "confidence":0.852952}
+ ] 
+}
+]

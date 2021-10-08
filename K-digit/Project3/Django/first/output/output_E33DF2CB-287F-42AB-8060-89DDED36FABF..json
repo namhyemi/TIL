@@ -1,0 +1,9 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/junE33DF2CB-287F-42AB-8060-89DDED36FABF.jpeg", 
+ "objects": [ 
+  {"class_id":366, "name":"13011010", "relative_coordinates":{"center_x":0.057606, "center_y":0.074700, "width":0.123402, "height":0.148774}, "confidence":0.724858}
+ ] 
+}
+]

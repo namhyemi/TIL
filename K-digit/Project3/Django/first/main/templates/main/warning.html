@@ -1,0 +1,270 @@
+{% extends 'main/main_base.html'%}
+{% load static %}
+{% block style %}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    .inputButton{
+        display: inline;
+        text-align: center;
+    }
+    .container{
+        text-align: center;
+    }
+    form{
+        display: inline;
+    }
+</style>
+{% endblock style %}
+{% block contents %}
+<div class='container'>
+    <div>
+        <br><br><br>
+        <div style="display: inline-block;">
+            [
+            {% if User.userDia != 'X' %}
+                [ 당뇨 {{ User.userDia }}형
+            {% endif %}
+            {% if User.userHyper != 'X' %}
+              |  고혈압 {{ User.userHyper }}형 |
+            {% endif %}
+            {% if User.userDysl != 'X' %}
+                이상지질혈증 {{ User.userDysl }}형
+            {% endif %}
+            ]
+            <br><br>
+        </div>
+        <br><br>
+        <div>
+            {% if results|length > 3 %}
+                <p><img src='https://steemitimages.com/DQmTabXAJGiMdfK8Uha6UY7m9jtmK4c31eEa3PLBuj6EABM/3.jpg' style = "width:300px"></p>
+            {% elif results|length == 0  %}
+                <p><img src='https://cdn.ppomppu.co.kr/zboard/data3/2019/0222/m_1550786185_9243_jjUI.jpg' style = "width:300px"></p>
+            {% else %} 
+                <p><img src='https://pic.pimg.tw/windslinda/1451728016-3250467763.jpg' style = "width:200px"></p>
+            {% endif %}
+        </div>
+    </div>
+    <div>
+        {% for i in results %}
+            <p>{{i.nutrition}} : {{i.base}} 대비 {{i.user}} 초과</p>
+        {% endfor %}
+    </div>
+
+    <div>
+        <br><p style="text-align: center; color: rgb(34,126,156);">식단을 등록하시겠습니까?</p><br>
+    </div>
+    <div style="text-align: center;">
+        {% if results|length == 0 %}
+        <button type="button" class="btn btn-outline-success" onclick="location.href='/main'">&nbsp &nbsp예&nbsp &nbsp</button>
+        {% else %}
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">&nbsp &nbsp예&nbsp &nbsp</button>
+        {% endif %}
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content" >
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> 맞춤 건강식 추천 </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                  
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            {% for i in results %}
+                                {% if forloop.first %}
+                                    <button type="button" style="background-color: darkolivegreen;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                {% else %}
+                                    <button type="button" style="background-color: darkolivegreen;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter0}}" aria-label="Slide {{forloop.counter0|add:1}}"></button>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="carousel-inner">
+                            {% for i in results %}
+                                {% if forloop.first %}
+                                    <div class="carousel-item active">
+                                        {% if i.nutrition == '나트륨' %}
+                                        <a href='/main/dia_recommend'>
+                                            <img src="http://m.ifoodtree.net/web/product/extra/big/202102/6b8ac276013c542ddb29bc3dc3041fb3.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;" >나트륨을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                            </div>
+                                            <br><br><br><br>
+                                        </a>
+                                        {% elif i.nutrition == '단백질' %}
+                                        <a href='/main/hyper_recommend'>
+                                            <img src="http://m.food11.co.kr/web/product/extra/big/202103/e47a42faaecb49a4034b00723c4f108f.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">단백질을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                            </div>
+                                            <br><br><br><br>
+                                        </a>
+                                        {% elif i.nutrition == '포화지방' %}
+                                        <a href='/main/hyper_recommend'>
+                                            <img src="http://m.food11.co.kr/web/product/extra/big/202103/e47a42faaecb49a4034b00723c4f108f.jpg" class="d-block w-50 h-40 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">포화지방을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                            </div>
+                                            <br><br><br><br>
+                                        </a>
+                                        {% elif i.nutrition == '콜레스테롤' %}
+                                        <a href='/main/dia_recommend'>
+                                            <img src="http://m.ifoodtree.net/web/product/extra/big/202102/6b8ac276013c542ddb29bc3dc3041fb3.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">콜레스테롤을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                            </div>
+                                            <br><br><br><br>
+                                        </a>
+                                        {% elif i.nutrition == '트랜스지방' %}
+                                        <a href='/main/hyper_recommend'>
+                                            <img src="http://m.food11.co.kr/web/product/extra/big/202103/e47a42faaecb49a4034b00723c4f108f.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">트랜스지방을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                            </div>
+                                            <br><br><br><br>
+                                        </a>
+                                        {% elif i.nutrition == '탄수화물' %}
+                                        <a href='/main/dia_recommend'>
+                                            <img src="http://m.ifoodtree.net/web/product/extra/big/202102/6b8ac276013c542ddb29bc3dc3041fb3.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">탄수화물을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                            </div>
+                                            <br><br><br><br>
+                                        </a>
+                                        {% elif i.nutrition == '지방' %}
+                                        <a href='/main/hyper_recommend'>
+                                            <img src="http://m.food11.co.kr/web/product/extra/big/202103/e47a42faaecb49a4034b00723c4f108f.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">지방을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                            </div>
+                                            <br><br><br><br>
+                                        </a>
+                                        {% else %}
+                                        {% endif %}
+                                    </div>
+                                {% else %}
+                                    <div class="carousel-item"> 
+                                        {% if i.nutrition == '나트륨' %}
+                                        <a href='/main/dia_recommend''>
+                                            <img src="http://m.ifoodtree.net/web/product/extra/big/202102/6b8ac276013c542ddb29bc3dc3041fb3.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">나트륨을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                            </div>
+                                            <br><br><br><br>
+                                        </a>    
+                                        {% elif i.nutrition == '단백질' %}
+                                        <a href='/main/hyper_recommend'>
+                                            <img src="http://m.food11.co.kr/web/product/extra/big/202103/e47a42faaecb49a4034b00723c4f108f.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">단백질을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                              </div>
+                                              <br><br><br><br>
+                                        </a>
+                                        {% elif i.nutrition == '포화지방' %}
+                                        <a href='/main/hyper_recommend'>
+                                            <img src="http://m.food11.co.kr/web/product/extra/big/202103/e47a42faaecb49a4034b00723c4f108f.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">포화지방을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                              </div>
+                                              <br><br><br><br>
+                                        </a>      
+                                        {% elif i.nutrition == '콜레스테롤' %}
+                                        <a href='/main/dia_recommend'>
+                                            <img src="http://m.ifoodtree.net/web/product/extra/big/202102/6b8ac276013c542ddb29bc3dc3041fb3.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">콜레스테롤을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                            </div>
+                                            <br><br><br><br>
+                                        </a>    
+                                        {% elif i.nutrition == '트랜스지방' %}
+                                        <a href='/main/hyper_recommend'>
+                                            <img src="http://m.food11.co.kr/web/product/extra/big/202103/e47a42faaecb49a4034b00723c4f108f.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">트랜스지방을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                              </div>
+                                              <br><br><br><br>
+                                        </a>
+                                        {% elif i.nutrition == '탄수화물' %}
+                                        <a href='/main/dia_recommend'>
+                                            <img src="http://m.ifoodtree.net/web/product/extra/big/202102/6b8ac276013c542ddb29bc3dc3041fb3.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">탄수화물을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                              </div>
+                                              <br><br><br><br>
+                                        </a>
+                                        {% elif i.nutrition == '지방' %}
+                                        <a href='/main/hyper_recommend'>
+                                            <img src="http://m.food11.co.kr/web/product/extra/big/202103/e47a42faaecb49a4034b00723c4f108f.jpg" class="d-block w-50 mx-auto" alt="이미지가 없습니다">
+                                            <div class="carousel-caption d-md-block">
+                                                <h5 style="color: black; background-color: white;">지방을 고려한 건강 식단</h5>
+                                                <p style="color: black"> 페이지 이동을 원하시면 이미지를 클릭해주세요 </p>
+                                              </div>
+                                              <br><br><br><br>
+                                        </a>
+                                        {% else %}
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <button class="carousel-control-prev" style="color:  rgb(108, 161, 28);" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span>이전</span>
+                            <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
+                          <!-- <span class="visually-hidden">Previous</span> -->
+                        </button>
+                        <button class="carousel-control-next" style="color: rgb(108, 161, 28);" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <!-- <span class="visually-hidden">Next</span> -->
+                          <span>다음</span>
+                        </button>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                  <button type="button" class="btn btn-primary" onclick="location.href='/main'">저장</button> 
+                </div>
+              </div>
+            </div>
+        </div>
+        <form action='./delete' method = "post" enctype="multipart/form-data" >
+            {% csrf_token %}
+            <input type="hidden" class="foodPass" name="foodPass" value='1'>
+            <input type="hidden" class="foodSeq" name="foodSeq" value="{{fileSeq}}">
+            <button type="submit" class="btn btn-outline-success">아니오</button>
+        </form>
+    </div>
+</div>
+
+    <!-- <br>
+    <p style="text-align: center; color: rgb(34,126,156);">식단을 등록하시겠습니까?</p>
+    <br>
+    <div style="text-align: center;">
+        <form method = "post" enctype="multipart/form-data" name="frm">
+            {% csrf_token %}
+            <input type="hidden" class="foodPass" name="foodPass" value='0'>
+            <input type="hidden" class="foodSeq" name="foodSeq" value="{{fileSeq}}">
+            <input type="button" class="btn btn-outline-success">&nbsp &nbsp예&nbsp &nbsp</button>
+        </form>
+        <form method = "post" enctype="multipart/form-data" name="frm2">
+            {% csrf_token %}
+            <input type="hidden" class="foodPass" name="foodPass" value='1'>
+            <input type="hidden" class="foodSeq" name="foodSeq" value="{{fileSeq}}">
+            <button type="submit" class="btn btn-outline-success">아니오</button>
+        </form>
+    </div> -->
+{% endblock contents %}

@@ -1,0 +1,10 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampusKakaoTalk_20211007_132153103.jpg", 
+ "objects": [ 
+  {"class_id":285, "name":"10011002", "relative_coordinates":{"center_x":0.197555, "center_y":0.152794, "width":0.202364, "height":0.194818}, "confidence":0.607304}, 
+  {"class_id":131, "name":"04012002", "relative_coordinates":{"center_x":0.866375, "center_y":0.713589, "width":0.191189, "height":0.285170}, "confidence":0.905605}
+ ] 
+}
+]

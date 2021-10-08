@@ -1,0 +1,9 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampus20200215_111230.jpg", 
+ "objects": [ 
+  {"class_id":312, "name":"11011009", "relative_coordinates":{"center_x":0.074751, "center_y":0.088804, "width":0.162381, "height":0.080459}, "confidence":0.907807}
+ ] 
+}
+]

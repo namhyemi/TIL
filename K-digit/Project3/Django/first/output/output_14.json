@@ -1,0 +1,16 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampus14.jpg", 
+ "objects": [ 
+  {"class_id":348, "name":"12011007", "relative_coordinates":{"center_x":0.572965, "center_y":0.533871, "width":0.209199, "height":0.181281}, "confidence":0.391754}, 
+  {"class_id":345, "name":"12011004", "relative_coordinates":{"center_x":0.750676, "center_y":0.422953, "width":0.137182, "height":0.161526}, "confidence":0.716139}, 
+  {"class_id":255, "name":"08013001", "relative_coordinates":{"center_x":0.352787, "center_y":0.377305, "width":0.200713, "height":0.235396}, "confidence":0.677906}, 
+  {"class_id":201, "name":"06012005", "relative_coordinates":{"center_x":0.355621, "center_y":0.378493, "width":0.196043, "height":0.237623}, "confidence":0.271449}, 
+  {"class_id":196, "name":"05013001", "relative_coordinates":{"center_x":0.551528, "center_y":0.300745, "width":0.129009, "height":0.167308}, "confidence":0.833555}, 
+  {"class_id":130, "name":"04012001", "relative_coordinates":{"center_x":0.176736, "center_y":0.582313, "width":0.148954, "height":0.217176}, "confidence":0.258133}, 
+  {"class_id":140, "name":"04012011", "relative_coordinates":{"center_x":0.176736, "center_y":0.582313, "width":0.148954, "height":0.217176}, "confidence":0.262696}, 
+  {"class_id":0, "name":"01011001", "relative_coordinates":{"center_x":0.768081, "center_y":0.637996, "width":0.169600, "height":0.204894}, "confidence":0.880175}
+ ] 
+}
+]

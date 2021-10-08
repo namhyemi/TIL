@@ -1,0 +1,11 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/bpm1633590831390.jpg", 
+ "objects": [ 
+  {"class_id":351, "name":"12011010", "relative_coordinates":{"center_x":0.227633, "center_y":0.337720, "width":0.223421, "height":0.224905}, "confidence":0.522616}, 
+  {"class_id":273, "name":"09012002", "relative_coordinates":{"center_x":0.491739, "center_y":0.218574, "width":0.203789, "height":0.259880}, "confidence":0.698783}, 
+  {"class_id":5, "name":"01012005", "relative_coordinates":{"center_x":0.320226, "center_y":0.740988, "width":0.283025, "height":0.339897}, "confidence":0.766218}
+ ] 
+}
+]

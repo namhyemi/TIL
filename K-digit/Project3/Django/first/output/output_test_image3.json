@@ -1,0 +1,9 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampustest_image3.jpg", 
+ "objects": [ 
+  {"class_id":305, "name":"11011002", "relative_coordinates":{"center_x":0.861597, "center_y":0.070282, "width":0.226666, "height":0.145745}, "confidence":0.928267}
+ ] 
+}
+]

@@ -1,0 +1,12 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampus7.jfif", 
+ "objects": [ 
+  {"class_id":266, "name":"09011003", "relative_coordinates":{"center_x":0.174414, "center_y":0.668248, "width":0.151785, "height":0.167069}, "confidence":0.252626}, 
+  {"class_id":265, "name":"09011002", "relative_coordinates":{"center_x":0.174900, "center_y":0.668498, "width":0.139862, "height":0.182824}, "confidence":0.287527}, 
+  {"class_id":204, "name":"06012008", "relative_coordinates":{"center_x":0.321919, "center_y":0.348928, "width":0.316941, "height":0.426722}, "confidence":0.298281}, 
+  {"class_id":0, "name":"01011001", "relative_coordinates":{"center_x":0.362359, "center_y":0.754056, "width":0.188093, "height":0.283686}, "confidence":0.551531}
+ ] 
+}
+]

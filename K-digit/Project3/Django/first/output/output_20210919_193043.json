@@ -1,0 +1,10 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/oea080520210919_193043.jpg", 
+ "objects": [ 
+  {"class_id":361, "name":"13011005", "relative_coordinates":{"center_x":0.701742, "center_y":0.217131, "width":0.089481, "height":0.107471}, "confidence":0.418807}, 
+  {"class_id":246, "name":"08012002", "relative_coordinates":{"center_x":0.387425, "center_y":0.190661, "width":0.189074, "height":0.247122}, "confidence":0.298260}
+ ] 
+}
+]

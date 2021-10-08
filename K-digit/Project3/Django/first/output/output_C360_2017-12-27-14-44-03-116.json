@@ -1,0 +1,10 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampusC360_2017-12-27-14-44-03-116.jpg", 
+ "objects": [ 
+  {"class_id":18, "name":"01014010", "relative_coordinates":{"center_x":0.761436, "center_y":0.342907, "width":0.363548, "height":0.398509}, "confidence":0.251848}, 
+  {"class_id":91, "name":"02011035", "relative_coordinates":{"center_x":0.761436, "center_y":0.342907, "width":0.363548, "height":0.398509}, "confidence":0.334484}
+ ] 
+}
+]

@@ -1,0 +1,9 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/multicampus2.jfif", 
+ "objects": [ 
+  {"class_id":97, "name":"02012001", "relative_coordinates":{"center_x":0.840815, "center_y":0.933778, "width":0.138554, "height":0.145114}, "confidence":0.412891}
+ ] 
+}
+]

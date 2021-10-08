@@ -1,0 +1,12 @@
+[
+{
+ "frame_id":1, 
+ "filename":"main/static/main/image/jun9D6AE907-1C9A-4F94-824E-0FB195DD7723.jpeg", 
+ "objects": [ 
+  {"class_id":361, "name":"13011005", "relative_coordinates":{"center_x":0.218727, "center_y":0.421279, "width":0.118230, "height":0.154811}, "confidence":0.863693}, 
+  {"class_id":344, "name":"12011003", "relative_coordinates":{"center_x":0.660611, "center_y":0.261483, "width":0.180424, "height":0.255779}, "confidence":0.496154}, 
+  {"class_id":111, "name":"03011010", "relative_coordinates":{"center_x":0.769963, "center_y":0.521901, "width":0.144773, "height":0.170683}, "confidence":0.790784}, 
+  {"class_id":3, "name":"01012003", "relative_coordinates":{"center_x":0.190564, "center_y":0.773306, "width":0.210775, "height":0.214428}, "confidence":0.277107}
+ ] 
+}
+]
