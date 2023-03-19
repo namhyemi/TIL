@@ -1,6 +1,5 @@
 # TIL(Today I Learn)
 
-내일의 나한테 미움받지 말자
 
 
 
